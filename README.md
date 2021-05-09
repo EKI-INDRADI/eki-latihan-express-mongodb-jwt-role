@@ -9,6 +9,16 @@ Info API di listen pada 127.0.0.1:8080  pastikan jangan merubah port backend
 ini adalah project backend yang dulu dipake untuk test di salah satu prusahaan startup yang saya tambahkan fitur JWT dan Admin Role untuk membuat token
 
 
+update note : 
+- user signup (jwt) dengan role spesifik  done
+- user signin (jwt) done
+- test halaman user (untuk user akun)  done
+- test halaman moderator (untuk  moderator akun)  done
+- test halaman admin (untuk  admin akun)  done
+
+
+next update :
+- merubah module (antrian, pasien) tanpa jwt menjadi wajib jwt
 
 
 # cara run backend :
