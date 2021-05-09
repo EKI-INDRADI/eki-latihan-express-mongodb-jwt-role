@@ -1,0 +1,4 @@
+{"_id":{"$oid":"609783e935cb4822ac746751"},"nomor_antrian":1,"createdAt":{"$date":"2021-05-09T06:40:41.792Z"},"updatedAt":{"$date":"2021-05-09T06:40:41.792Z"},"__v":0}
+{"_id":{"$oid":"609783ea35cb4822ac746752"},"nomor_antrian":2,"createdAt":{"$date":"2021-05-09T06:40:42.786Z"},"updatedAt":{"$date":"2021-05-09T06:40:42.786Z"},"__v":0}
+{"_id":{"$oid":"609783eb35cb4822ac746753"},"nomor_antrian":3,"createdAt":{"$date":"2021-05-09T06:40:43.628Z"},"updatedAt":{"$date":"2021-05-09T06:40:43.628Z"},"__v":0}
+{"_id":{"$oid":"609783ec35cb4822ac746754"},"nomor_antrian":4,"createdAt":{"$date":"2021-05-09T06:40:44.352Z"},"updatedAt":{"$date":"2021-05-09T06:40:44.352Z"},"__v":0}
