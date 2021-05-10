@@ -7,7 +7,7 @@
 - BACKEND API EXPRESSJS JWT & ADMIN ROLE (MONGODB-ANGULAR-EXPRESSJS-NODEJS)
 
 
-Info API di listen pada 127.0.0.1:8080  pastikan jangan merubah port backend
+Info API di listen pada 127.0.0.1:8080  
 
 ini adalah project backend yang dulu dipake untuk test di salah satu prusahaan startup yang saya tambahkan fitur JWT dan Admin Role untuk membuat token
 
