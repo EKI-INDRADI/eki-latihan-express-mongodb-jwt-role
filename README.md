@@ -1,7 +1,7 @@
 # EKI MEAN BACKEND
 
 
-"Tinggal mangap + di suapin  = auto jadi backend"
+"Auto jadi backend"
 
 
 - BACKEND API EXPRESSJS JWT & ADMIN ROLE (MONGODB-ANGULAR-EXPRESSJS-NODEJS)
@@ -19,9 +19,10 @@ update note :
 - test halaman moderator (untuk  moderator akun)  done
 - test halaman admin (untuk  admin akun)  done
 - merubah module (antrian, pasien) tanpa jwt menjadi wajib jwt
+- express file upload & download media/images
 
 next update :
-- express file upload  media & images
+- express file upload & download media/images to mongodb
 - swagger
 
 

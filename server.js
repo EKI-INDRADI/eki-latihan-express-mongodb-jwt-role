@@ -7,6 +7,10 @@ const dbConfig = require("./app/config/db.config");
 
 const app = express();
 
+// ===================================== FILE UPLOAD
+global.__basedir = __dirname;
+// ===================================== FILE UPLOAD
+
 var corsOptions = {
   //origin: "http://localhost:4200"
   origin: "*"
@@ -76,6 +80,12 @@ require("./app/routes/auth.routes")(app);
 require("./app/routes/user.routes")(app);
 // ===================================== JWT MODULE - ADMIN ROLE
 
+// ===================================== FILE UPLOAD
+require("./app/routes/fileUpload.routes")(app);
+// ===================================== FILE UPLOAD
+
+
+
 
 // ============================== EKI INFO 
 // ngikutin tutorial dari : 
@@ -140,6 +150,16 @@ require("./app/routes/user.routes")(app);
 // user = cuma bs user
 
 
+
+
+
+/// example express file upload referensi :
+
+// https://github.com/bezkoder?tab=repositories&q=express&type=&language=&sort=
+// https://github.com/bezkoder/express-file-upload
+// https://github.com/bezkoder/node-js-upload-image-mongodb
+// https://github.com/bezkoder/node-js-express-download-file
+// https://github.com/bezkoder/node-js-download-csv-file
 // ============================== EKI INFO 
 
 const PORT = process.env.PORT || 8080;
