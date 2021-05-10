@@ -1,0 +1,1030 @@
+{
+	"info": {
+		"_postman_id": "fc378be8-51be-4b4c-9a66-a3a8e51e795c",
+		"name": "EXPRESSJS_MONGODB_EKI_NEW_JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET / ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | POST PASIEN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"nama_pasien\": \"pasien3\",\r\n    \"usia\" : \"usia1\",\r\n    \"alamat\": \"alamat1\",\r\n    \"provinsi\": \"provinsi1\",\r\n    \"kotakab\": \"kotakab1\",\r\n    \"kecamatan\": \"kecamatan1\",\r\n    \"bpjs\": true,\r\n    \"poli\": \"gigi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | GET PASIEN ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | GET PASIEN skip limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien?skip=2&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | GET PASIEN NAME skip limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/name/1?skip=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"name",
+						"1"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | GET PASIEN BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/608c130e9a087e38b4dd2cb6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"608c130e9a087e38b4dd2cb6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | PUT PASIEN BY ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"nama_pasien\": \"pasien100\",\r\n    \"usia\" : \"usia100\",\r\n    \"alamat\": \"alamat100\",\r\n    \"provinsi\": \"provinsi100\",\r\n    \"kotakab\": \"kotakab100\",\r\n    \"kecamatan\": \"kecamatan100\",\r\n    \"bpjs\": false,\r\n    \"poli\": \"gigi100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/608c13f89a087e38b4dd2cb7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"608c13f89a087e38b4dd2cb7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | DELETE PASIEN BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/608c130e9a087e38b4dd2cb6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"608c130e9a087e38b4dd2cb6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | DELETE PASIEN ALL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | GET ANTRIAN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/antrian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"antrian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | POST ANTRIAN INCREMENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/antrian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"antrian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | DELETE ANTRIAN ALL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/antrian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"antrian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT SIGNUP DEFAULT [USER]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\"username\": \"ekiindradi2\",\r\n\"email\" : \"user@gmail.com\",\r\n\"password\": \"masuk123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT SIGNUP SPESIFIK [MODDERATOR]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\"username\": \"moderator\",\r\n\"email\" : \"moderator@gmail.com\",\r\n\"password\": \"masuk123\",\r\n\"roles\" : [\"user\", \"moderator\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT SIGNUP SPESIFIK [ADMIN]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\"username\": \"admin2\",\r\n\"email\" : \"admin2@gmail.com\",\r\n\"password\": \"masuk123\",\r\n\"roles\" : [\"user\", \"moderator\" , \"admin\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT SIGNUP SPESIFIK [ADMIN] (not recomended)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\"username\": \"admin4\",\r\n\"email\" : \"admin4@gmail.com\",\r\n\"password\": \"masuk123\",\r\n\"roles\" : [\"admin\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT SIGNIN [USER]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\"username\": \"ekiindradi2\",\r\n\"password\": \"masuk123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT SIGNIN [MODERATOR]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\"username\": \"moderator\",\r\n\"password\": \"masuk123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT SIGNIN [ADMIN]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\"username\": \"admin2\",\r\n\"password\": \"masuk123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/test/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT x-access-token GET  [USER]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhNmUwNjNkNTZkMTM4YzJlNDljNSIsImlhdCI6MTYyMDU1NDA5NSwiZXhwIjoxNjIwNjQwNDk1fQ.roajxV_L9lPKIKqbKYHDNqBxS-RF7KUE7F9kAGvcEBc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/test/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT x-access-token GET [MOD]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhMWJkNjNkNTZkMTM4YzJlNDljMyIsImlhdCI6MTYyMDU1NDAyNSwiZXhwIjoxNjIwNjQwNDI1fQ.NzYXVlGZMwVCpzZZTYwL8j6EZBnFCJNDFTCyjSDxAR4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/test/mod",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test",
+						"mod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT x-access-token GET [ADMIN]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhNmQxNjNkNTZkMTM4YzJlNDljNCIsImlhdCI6MTYyMDU1NDM2MywiZXhwIjoxNjIwNjQwNzYzfQ.qPcU0DbRhHm-OpYNkciGWFKZLqIWlY9VOvU_vGYZA_M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/test/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT USED | JWT Authorization GET  USER (MOD,ADMIN)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTc4NzgxZjJhZjE4MDU0MGFjYzg4YSIsImlhdCI6MTYyMDU1MDMxNSwiZXhwIjoxNjIwNjM2NzE1fQ.CUxuBbVTK0f_pVt1SuXly7R092SV5FDeXwXssp5yahw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/test/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW JWT GET ANTRIAN [MOD]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhMWJkNjNkNTZkMTM4YzJlNDljMyIsImlhdCI6MTYyMDYxNzIzNiwiZXhwIjoxNjIwNzAzNjM2fQ.9xwZ9goMZpJdBHhh3XGYDp7hUmtmGgi2DT-K5hWcsw0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/antrian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"antrian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW JWT POST ANTRIAN INCREMENT [MOD]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhMWJkNjNkNTZkMTM4YzJlNDljMyIsImlhdCI6MTYyMDYxNzIzNiwiZXhwIjoxNjIwNzAzNjM2fQ.9xwZ9goMZpJdBHhh3XGYDp7hUmtmGgi2DT-K5hWcsw0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/antrian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"antrian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DANGER | NEW JWT DELETE ANTRIAN ALL [MOD]",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhMWJkNjNkNTZkMTM4YzJlNDljMyIsImlhdCI6MTYyMDYxNzIzNiwiZXhwIjoxNjIwNzAzNjM2fQ.9xwZ9goMZpJdBHhh3XGYDp7hUmtmGgi2DT-K5hWcsw0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/antrian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"antrian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW JWT GET PASIEN ALL [USER]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhNmUwNjNkNTZkMTM4YzJlNDljNSIsImlhdCI6MTYyMDYxOTU2MCwiZXhwIjoxNjIwNzA1OTYwfQ.8YkPpSHdPiE9_wsOEDiL1n_3EF3Bd8ar9vZF61Nph84",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW JWT GET PASIEN skip limit [USER]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhNmUwNjNkNTZkMTM4YzJlNDljNSIsImlhdCI6MTYyMDYxOTEzMiwiZXhwIjoxNjIwNzA1NTMyfQ.McwDPHc93qNKUGGLE23Pm9qOM18YwCP28xndL5pywkc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien?skip=2&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW JWT GET PASIEN NAME skip limit [USER]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhNmUwNjNkNTZkMTM4YzJlNDljNSIsImlhdCI6MTYyMDYxOTEzMiwiZXhwIjoxNjIwNzA1NTMyfQ.McwDPHc93qNKUGGLE23Pm9qOM18YwCP28xndL5pywkc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/name/1?skip=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"name",
+						"1"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW JWT GET PASIEN BY ID [USER]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhNmUwNjNkNTZkMTM4YzJlNDljNSIsImlhdCI6MTYyMDYxOTEzMiwiZXhwIjoxNjIwNzA1NTMyfQ.McwDPHc93qNKUGGLE23Pm9qOM18YwCP28xndL5pywkc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/608c130e9a087e38b4dd2cb6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"608c130e9a087e38b4dd2cb6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW JWT POST PASIEN [MODERATOR]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhMWJkNjNkNTZkMTM4YzJlNDljMyIsImlhdCI6MTYyMDYxOTQ1NiwiZXhwIjoxNjIwNzA1ODU2fQ.a0UM4ehzPFFjQwyZs8nCVRtexk3hF6zJ5u_88P0Sujc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"nama_pasien\": \"pasien3\",\r\n    \"usia\" : \"usia1\",\r\n    \"alamat\": \"alamat1\",\r\n    \"provinsi\": \"provinsi1\",\r\n    \"kotakab\": \"kotakab1\",\r\n    \"kecamatan\": \"kecamatan1\",\r\n    \"bpjs\": true,\r\n    \"poli\": \"gigi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW JWT PUT PASIEN BY ID [MODERATOR]",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhMWJkNjNkNTZkMTM4YzJlNDljMyIsImlhdCI6MTYyMDYxOTQ1NiwiZXhwIjoxNjIwNzA1ODU2fQ.a0UM4ehzPFFjQwyZs8nCVRtexk3hF6zJ5u_88P0Sujc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"nama_pasien\": \"pasien100\",\r\n    \"usia\" : \"usia100\",\r\n    \"alamat\": \"alamat100\",\r\n    \"provinsi\": \"provinsi100\",\r\n    \"kotakab\": \"kotakab100\",\r\n    \"kecamatan\": \"kecamatan100\",\r\n    \"bpjs\": \"false\",\r\n    \"poli\": \"gigi100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/6098b0da7947ba2c80579a35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"6098b0da7947ba2c80579a35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW JWT DELETE PASIEN BY ID [ADMIN]",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhNmQxNjNkNTZkMTM4YzJlNDljNCIsImlhdCI6MTYyMDYxOTYzNiwiZXhwIjoxNjIwNzA2MDM2fQ.wnJouMe8rWs0Kd77XLdHkQRizigoUJzWgfUakLEJLlA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/608c130e9a087e38b4dd2cb6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"608c130e9a087e38b4dd2cb6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DANGER | NEW JWT DELETE PASIEN ALL [ADMIN]",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTdhNmQxNjNkNTZkMTM4YzJlNDljNCIsImlhdCI6MTYyMDYxOTYzNiwiZXhwIjoxNjIwNzA2MDM2fQ.wnJouMe8rWs0Kd77XLdHkQRizigoUJzWgfUakLEJLlA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
