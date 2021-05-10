@@ -19,10 +19,9 @@ update note :
 - test halaman moderator (untuk  moderator akun)  done
 - test halaman admin (untuk  admin akun)  done
 - merubah module (antrian, pasien) tanpa jwt menjadi wajib jwt
-- express file upload & download media/images
+- express file upload & download media/images 
 
 next update :
-- express file upload & download media/images to mongodb
 - swagger
 
 
