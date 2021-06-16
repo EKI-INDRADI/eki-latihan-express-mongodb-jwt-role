@@ -20,6 +20,7 @@ update note :
 - test halaman admin (untuk  admin akun)  done
 - merubah module (antrian, pasien) tanpa jwt menjadi wajib jwt
 - express file upload & download media/images 
+- update request limit
 
 next update :
 - swagger
