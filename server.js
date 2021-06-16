@@ -5,6 +5,11 @@ const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
 // =============================== CONNECTION BY VAR
 
+// =============================== LIMIT REQUEST
+const rateLimit = require("express-rate-limit");
+// =============================== LIMIT REQUEST
+
+
 const app = express();
 
 // ===================================== FILE UPLOAD
@@ -67,6 +72,26 @@ db.mongoose
   });
 // =============================== CONNECTION BY VAR
 
+
+
+const enable_rate_limit_1sec_per_second = rateLimit({
+  // windowMs: 60 * 60 * 1000, // 1 hour window
+  // max: 5, // start blocking after 5 requests
+  // message:
+  //   "Too many accounts created from this IP, please try again after an hour"
+
+  windowMs: 1000, // 1 second
+  max:1, // start blocking after 1 requests
+  message:
+    {status : 0, rate_limit : "block", message :"Too many request from this IP, please try again after an second" }
+});
+
+
+// 16-june-2021 ============ enable rate limit
+app.get("/rate-limit",enable_rate_limit_1sec_per_second,  (req, res) => {
+  res.json({ message: "Rate limit  1 sec OK" });
+});
+// 16-june-2021 ============ enable rate limit
 
 
 app.get("/", (req, res) => {

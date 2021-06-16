@@ -8,8 +8,9 @@
 
 // bisa jg gini 
   module.exports = {
-    HOST: "192.168.100.3",
-    //PORT: 27017,
-    PORT: 7000,
+    HOST: "127.0.0.1",
+    // HOST: "192.168.100.3",
+    PORT: 27017,
+    // PORT: 7000,
     DB: "EKI_INDRADI"
   };
