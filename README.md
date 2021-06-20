@@ -83,7 +83,17 @@ Hash password pake bcryptjs :
 
 - npm install  ( agar instal depedency )
 
-- jalankan perintah "node server.js" tanpa tanda petik
+- jalankan perintah,
+
+single threads :
+```ts
+node server-single-thread.js
+```
+
+multi threads :
+```ts
+node server-multithreading.js
+```
 
 - backend akan berjalan pada port 8080
 
