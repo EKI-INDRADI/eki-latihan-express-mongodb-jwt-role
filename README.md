@@ -1,32 +1,32 @@
-# EKI MEAN BACKEND
-
-
-
-
+# EKI RESEARCH & DEVELOPMENT BACKEND
 
 "MAKE BEST BACKEND ENGINEER, FREE FOR YOU"
 
 
-- BACKEND API EXPRESSJS JWT & ADMIN ROLE (MONGODB-ANGULAR-EXPRESSJS-NODEJS)
+- BACKEND API EXPRESSJS ZAMAN NOW !!!
 
 
 Info API di listen pada 127.0.0.1:8080  
 
-ini adalah project backend yang dulu dipake untuk test di salah satu prusahaan startup yang saya tambahkan fitur JWT dan Admin Role untuk membuat token
+ini adalah project backend yang pernah dipakai untuk test di salah satu prusahaan startup yang saya tambahkan beberapa fitur canggih ZAMAN NOW
 
 
 update note : 
-- user signup (jwt) dengan role spesifik  done
-- user signin (jwt) done
-- test halaman user (untuk user akun)  done
-- test halaman moderator (untuk  moderator akun)  done
-- test halaman admin (untuk  admin akun)  done
-- merubah module (antrian, pasien) tanpa jwt menjadi wajib jwt
-- file upload & download media/images 
-- update request limit
-
+- user signup (jwt) dengan role spesifik  [done]
+- user signin (jwt) [done]
+- test halaman user (untuk user akun) [done]
+- test halaman moderator (untuk  moderator akun)  [done]
+- test halaman admin (untuk  admin akun)  [done]
+- merubah module (antrian, pasien) tanpa jwt menjadi wajib jwt [done]
+- file upload & download media/images  [done]
+- request limit [done]
+- multi threads /  cluster / multithreading [done]
+ 
 next update :
+- message broker / event driven [still rnd]
+- database caching [still rnd]
 - swagger
+
 
 
 
@@ -112,7 +112,9 @@ Hash password pake bcryptjs :
 
 # Scalable & Optimize backend (Performance Tuning) :
 
-- Global request limit , (1 request / second)
+- Global request limit , (1 request / second dalam 1 IP) , berguna untuk mencegah server membaca request yang tidak diperlukan, atau bisa juga mencegah apabila API melakukan insert secara bersamaan yang mengakibatkan data duplicate.
+
+- multi threads / node cluster / multithreading, memanfaat threads cpu yang tidak terpakai apabila menangani request banyak dalam waktu bersamaan.
 
 
 
@@ -144,11 +146,19 @@ Hash password pake bcryptjs :
 
 (https://www.udemy.com/course/mongodb-the-complete-developers-guide)
 
+- Udemy - Pravinkumar Dabade 
+(https://www.udemy.com/course/node-js-cluster)
 
 
 
 
 
-Regards,
+# Regards,
 
-Eki Indradi
+# Eki Indradi
+
+
+
+
+"TIME > KNOWLEDGE > MONEY",  hal yang termahal adalah waktu, kemudian pengetahuan, uang hanya berada di posisi terakhir, karena waktu tidak akan pernah kembali dan terus berputar, karena pengetahuan tidak akan pernah hilang atau berkurang, dan hanya uang yang bisa berpindah tuan, "Eki Indradi".
+
