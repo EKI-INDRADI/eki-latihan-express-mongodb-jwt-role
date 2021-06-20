@@ -1,7 +1,10 @@
 # EKI MEAN BACKEND
 
 
-"Auto jadi backend"
+
+
+
+"MAKE BEST BACKEND ENGINEER, FREE FOR YOU"
 
 
 - BACKEND API EXPRESSJS JWT & ADMIN ROLE (MONGODB-ANGULAR-EXPRESSJS-NODEJS)
@@ -19,11 +22,13 @@ update note :
 - test halaman moderator (untuk  moderator akun)  done
 - test halaman admin (untuk  admin akun)  done
 - merubah module (antrian, pasien) tanpa jwt menjadi wajib jwt
-- express file upload & download media/images 
+- file upload & download media/images 
 - update request limit
 
 next update :
 - swagger
+
+
 
 
 
@@ -68,7 +73,11 @@ Hash password pake bcryptjs :
   });
 ```
 
-# cara run backend :
+
+
+
+
+# How to run backend :
 
 - install nodejs
 
@@ -77,6 +86,8 @@ Hash password pake bcryptjs :
 - jalankan perintah "node server.js" tanpa tanda petik
 
 - backend akan berjalan pada port 8080
+
+
 
 
 
@@ -94,6 +105,14 @@ Hash password pake bcryptjs :
 
 - Admin role , moderator role , user role
 
+- file upload & download media/images
+
+
+
+
+# Scalable & Optimize backend (Performance Tuning) :
+
+- Global request limit , (1 request / second)
 
 
 
@@ -106,6 +125,27 @@ Hash password pake bcryptjs :
 - setelah nomor angka dipanggil pasien ke bagian registrasi untuk mendaftarkan lalu admin input data
 
 - setelah berhasil data akan masuk ke list data
+
+
+
+
+
+# Referensi : 
+
+- https://bezkoder.com/category/node-js/
+
+- https://bezkoder.com/node-js-mongodb-auth-jwt/
+
+- Programmer Zaman Now Vlog - Eko Kurniawan Khannedy 
+
+(https://www.youtube.com/watch?v=3PMLwe_C-F0&list=PL-CtdCApEFH-aVPPDMSfNmKVZghCyGpBQ)
+
+- Udemy - Academind - Maximilian Schwarzmüller
+
+(https://www.udemy.com/course/mongodb-the-complete-developers-guide)
+
+
+
 
 
 

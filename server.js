@@ -124,10 +124,14 @@ require("./app/routes/fileUpload.routes")(app);
 
 
 
-// ============================== EKI INFO 
-// ngikutin tutorial dari : 
+// ============================== Referensi
+// Referensi : 
 // https://bezkoder.com/category/node-js/
 // https://bezkoder.com/node-js-mongodb-auth-jwt/
+// Programmer Zaman Now Vlog - Eko Kurniawan Khannedy (https://www.youtube.com/watch?v=3PMLwe_C-F0&list=PL-CtdCApEFH-aVPPDMSfNmKVZghCyGpBQ)
+// https://www.udemy.com/course/mongodb-the-complete-developers-guide
+// https://www.udemy.com/course/node-js-cluster
+// 
 
 
 // cara ubah ROLE_USER ke ROLE_ADMIN / role_moderates  (not recomended)
