@@ -1,6 +1,6 @@
 # EKI RESEARCH & DEVELOPMENT BACKEND
 
-"MAKE BEST BACKEND ENGINEER, FREE FOR YOU"
+"MAKE BEST BACKEND ENGINEER, JUST FREE FOR YOU"
 
 
 - BACKEND API EXPRESSJS ZAMAN NOW !!!
@@ -147,6 +147,7 @@ Hash password pake bcryptjs :
 (https://www.udemy.com/course/mongodb-the-complete-developers-guide)
 
 - Udemy - Pravinkumar Dabade 
+
 (https://www.udemy.com/course/node-js-cluster)
 
 
