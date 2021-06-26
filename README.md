@@ -167,9 +167,9 @@ node server-multithreading.js
 # Regards,
 
 # Eki Indradi
+"TIME > KNOWLEDGE > MONEY".
 
 
 
 
-"TIME > KNOWLEDGE > MONEY",  hal yang termahal adalah waktu, kemudian pengetahuan, uang hanya berada di posisi terakhir, karena waktu tidak akan pernah kembali dan terus berputar, karena pengetahuan tidak akan pernah hilang atau berkurang, dan hanya uang yang bisa berpindah tuan, "Eki Indradi".
 
