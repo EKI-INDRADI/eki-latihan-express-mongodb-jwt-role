@@ -21,7 +21,12 @@ update note :
 - file upload & download media/images  [done]
 - request limit [done]
 - multi threads /  cluster / multithreading [done]
- 
+- multi child process comunication (spesific, still learning to dynamic synchronous) [done]
+- disable restart nodemon (restart js file only) [done]
+- enable PM2 mode cluster [done]
+- try catch function detail [done]
+- view delay response time (milisecond) [done]
+
 next update :
 - message broker / event driven [still rnd]
 - database caching [still rnd]
@@ -81,18 +86,16 @@ Hash password pake bcryptjs :
 
 - install nodejs
 
+- npm install nodemon
+
 - npm install  ( agar instal depedency )
 
 - jalankan perintah,
 
-single threads :
-```ts
-node server-single-thread.js
-```
-
 multi threads :
 ```ts
-node server-multithreading.js
+npm run start:cluster   (nodemon)
+pm2 start ecosystem.config.js   (pm2)
 ```
 
 - backend akan berjalan pada port 8080
@@ -117,6 +120,10 @@ node server-multithreading.js
 
 - file upload & download media/images
 
+- create file log 
+
+
+
 
 
 
@@ -124,7 +131,9 @@ node server-multithreading.js
 
 - Global request limit , (1 request / second dalam 1 IP) , berguna untuk mencegah server membaca request yang tidak diperlukan, atau bisa juga mencegah apabila API melakukan insert secara bersamaan yang mengakibatkan data duplicate.
 
-- multi threads / node cluster / multithreading, memanfaat threads cpu yang tidak terpakai apabila menangani request banyak dalam waktu bersamaan.
+- multi threads / node cluster / multithreading, menggunakan seluruh threads cpu pada waktu bersamaan.
+
+- child process , memanfaat threads secara spesific dan dapat melakukan multi handle dalam waktu yang bersamaan (tanpa antrian).
 
 
 
@@ -160,7 +169,7 @@ node server-multithreading.js
 
 (https://www.udemy.com/course/node-js-cluster)
 
-
+- https://github.com/behroozk/node-cluster-tutorial
 
 
 

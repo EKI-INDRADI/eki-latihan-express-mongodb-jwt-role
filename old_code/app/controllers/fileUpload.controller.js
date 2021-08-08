@@ -1,5 +1,4 @@
-// const uploadFile = require("../middlewares/fileUpload");
-const uploadFile = require("../functions/fileUpload.functions");
+const uploadFile = require("../middlewares/fileUpload");
 const fs = require("fs");
 const baseUrl = "http://localhost:8080/files/";
 
