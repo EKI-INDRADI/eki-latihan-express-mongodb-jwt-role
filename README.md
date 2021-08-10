@@ -26,6 +26,10 @@ update note :
 - enable PM2 mode cluster [done]
 - try catch function detail [done]
 - view delay response time (milisecond) [done]
+- multi child process comunication (spesific & FIFO alorithm for dynamic synchronous) [done]
+- loadtest (testing cluster & child process = multi request per second) [done]
+- automatic check undefined data with function request_validation [done]
+- update generate log file milisecond + microsecond + nanosecond [done]
 
 next update :
 - message broker / event driven [still rnd]

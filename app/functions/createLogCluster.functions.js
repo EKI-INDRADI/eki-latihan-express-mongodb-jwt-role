@@ -9,7 +9,7 @@ __basedir = base_dir.set_cluster_base_dir()
 exports.createLogCluster_function = async function (data, func_name = "_", note = "_", new_dir) {
 
 
-  
+
     //===================
     // const axios = require('axios').default;
     // try {
@@ -48,12 +48,39 @@ exports.createLogCluster_function = async function (data, func_name = "_", note 
         }
 
 
+        // ================== update nanosecond because cluster + child-process super fast
+        const now = (unit) => {
+
+            const hrTime = process.hrtime();
+
+            switch (unit) {
+
+                case 'milli':
+                    return hrTime[0] * 1000 + hrTime[1] / 1000000;
+
+                case 'micro':
+                    return hrTime[0] * 1000000 + hrTime[1] / 1000;
+
+                case 'nano':
+                default:
+                    return hrTime[0] * 1000000000 + hrTime[1];
+            }
+
+        };
+
+        // now('milli'); //  120335360.999686
+        // now('micro'); // 120335360966.583
+        // now('nano'); //  120335360904333
+        // ================== update nanosecond because cluster + child-process super fast
+
         let auto_generate = ("0" + new Date().getDate()).slice(-2) + "-"
             + ("0" + (new Date().getMonth() + 1)).slice(-2) + "-"
             + new Date().getFullYear() + "-"
             + ("0" + new Date().getHours()).slice(-2)
             + ("0" + new Date().getMinutes()).slice(-2)
-            + ("0" + new Date().getMilliseconds());
+            + ("0" + new Date().getMilliseconds()) + "-"
+            + now('micro') + "-"
+            + now('nano')
 
 
         let text_write_by_file_type;

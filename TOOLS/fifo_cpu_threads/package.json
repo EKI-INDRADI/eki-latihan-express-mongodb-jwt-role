@@ -1,0 +1,15 @@
+{
+  "name": "child_process_handle_fifo",
+  "version": "1.0.0",
+  "description": "EKI INDRADI",
+  "main": "child_process_handle_fifo.js",
+  "scripts": {
+    "start": "node ./child_process_handle_fifo"
+  },
+  "keywords": [
+    "EKI",
+    "INDRADI"
+  ],
+  "author": "EKI INDRADI",
+  "license": "ISC"
+}

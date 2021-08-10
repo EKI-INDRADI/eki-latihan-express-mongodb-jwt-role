@@ -1,0 +1,14 @@
+{
+  "name": "loadtest_cluster",
+  "version": "1.0.0",
+  "description": "EKI INDRADI",
+  "main": "loadtest_cluster.js",
+  "scripts": {
+    "start": "node ./loadtest_cluster"
+  },
+  "author": "EKI INDRADI",
+  "license": "ISC",
+  "dependencies": {
+    "loadtest": "^5.1.2"
+  }
+}
