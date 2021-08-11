@@ -2,6 +2,7 @@
 // import os from "os";
 const cluster = require("cluster");
 const os = require('os') //.cpus().length;
+const setup_console_log = require('./enableConsoleLog')
 
 // export default (callback = null) => {
 module.exports = (callback = null) => {
@@ -88,25 +89,24 @@ module.exports = (callback = null) => {
 
 
         log_cluster_child_process1.on('message', function (message) {
-            // let data_message
-            // if (message.constructor == Array || message.constructor == Object) {
-            //     data_message = JSON.stringify(message).toString();
-            // } else {
-            //     data_message = message
-            // }
-            console.log(`Message received from (cpu thread 1) child process PID : ${log_cluster_child_process1.pid} \n ${JSON.stringify(message)}`);
+            if (setup_console_log.enable == true) {
+                console.log(`Message received from (cpu thread 1) child process PID : ${log_cluster_child_process1.pid} \nmessage (cpu thread 1) : ${message}`);
+            }
         });
         log_cluster_child_process2.on('message', function (message) {
-
-            console.log(`Message received from (cpu thread 2) child process PID : ${log_cluster_child_process2.pid} \n ${JSON.stringify(message)}`);
+            if (setup_console_log.enable == true) {
+                console.log(`Message received from (cpu thread 2) child process PID : ${log_cluster_child_process2.pid} \nmessage (cpu thread 2) : ${message}`);
+            }
         });
         log_cluster_child_process3.on('message', function (message) {
-
-            console.log(`Message received from (cpu thread 3) child process PID : ${log_cluster_child_process3.pid} \n ${JSON.stringify(message)}`);
+            if (setup_console_log.enable == true) {
+                console.log(`Message received from (cpu thread 3) child process PID : ${log_cluster_child_process3.pid} \nmessage (cpu thread 3) : ${message}`);
+            }
         });
         log_cluster_child_process4.on('message', function (message) {
-
-            console.log(`Message received from (cpu thread 4) child process PID : ${log_cluster_child_process4.pid} \n ${JSON.stringify(message)}`);
+            if (setup_console_log.enable == true) {
+                console.log(`Message received from (cpu thread 4) child process PID : ${log_cluster_child_process4.pid} \nmessage (cpu thread 4) : ${message}`);
+            }
         });
 
 
@@ -125,104 +125,105 @@ module.exports = (callback = null) => {
 
             worker.on("message", message => {
 
+                // ============================ log_cluster_child_process
 
-                // console.log("===============message===================")
-                // console.log(message)
-
-                if (message && message.child_process == 1) {
-                    log_cluster_child_process1.send(message);
-                } else if (message && message.child_process == 2) {
-                    log_cluster_child_process2.send(message);
-                } else if (message && message.child_process == 3) {
-                    log_cluster_child_process3.send(message);
-                } else if (message && message.child_process == 4) {
-                    log_cluster_child_process4.send(message);
-                } else {
-
-
-
-                    // FIFO HANDLE
-                    if (child_process_handle_fifo[0] == 1) {
+                if (message && message.from == 'log-cluster') {
+                    // SPESIFIC
+                    if (message && message.child_process == 1) {
                         log_cluster_child_process1.send(message);
-                        temp_child_process_handle_fifo = child_process_handle_fifo[0]
-                        child_process_handle_fifo.shift();
-                        child_process_handle_fifo.push(temp_child_process_handle_fifo)
-                    }
-
-                    if (child_process_handle_fifo[0] == 2) {
+                    } else if (message && message.child_process == 2) {
                         log_cluster_child_process2.send(message);
-                        temp_child_process_handle_fifo = child_process_handle_fifo[0]
-                        child_process_handle_fifo.shift();
-                        child_process_handle_fifo.push(temp_child_process_handle_fifo)
-                    }
-
-                    if (child_process_handle_fifo[0] == 3) {
+                    } else if (message && message.child_process == 3) {
                         log_cluster_child_process3.send(message);
-                        temp_child_process_handle_fifo = child_process_handle_fifo[0]
-                        child_process_handle_fifo.shift();
-                        child_process_handle_fifo.push(temp_child_process_handle_fifo)
-                    }
-
-
-                    if (child_process_handle_fifo[0] == 4) {
+                    } else if (message && message.child_process == 4) {
                         log_cluster_child_process4.send(message);
-                        temp_child_process_handle_fifo = child_process_handle_fifo[0]
-                        child_process_handle_fifo.shift();
-                        child_process_handle_fifo.push(temp_child_process_handle_fifo)
-                    }
+                    } else {
+
+                        // FIFO HANDLE
+                        if (child_process_handle_fifo[0] == 1) {
+                            log_cluster_child_process1.send(message);
+                            temp_child_process_handle_fifo = child_process_handle_fifo[0]
+                            child_process_handle_fifo.shift();
+                            child_process_handle_fifo.push(temp_child_process_handle_fifo)
+                        } else if (child_process_handle_fifo[0] == 2) {
+                            log_cluster_child_process2.send(message);
+                            temp_child_process_handle_fifo = child_process_handle_fifo[0]
+                            child_process_handle_fifo.shift();
+                            child_process_handle_fifo.push(temp_child_process_handle_fifo)
+                        } else if (child_process_handle_fifo[0] == 3) {
+                            log_cluster_child_process3.send(message);
+                            temp_child_process_handle_fifo = child_process_handle_fifo[0]
+                            child_process_handle_fifo.shift();
+                            child_process_handle_fifo.push(temp_child_process_handle_fifo)
+                        } else if (child_process_handle_fifo[0] == 4) {
+                            log_cluster_child_process4.send(message);
+                            temp_child_process_handle_fifo = child_process_handle_fifo[0]
+                            child_process_handle_fifo.shift();
+                            child_process_handle_fifo.push(temp_child_process_handle_fifo)
+                        } else {
+                            log_cluster_child_process1.send(message);
+                            temp_child_process_handle_fifo = child_process_handle_fifo[0]
+                            child_process_handle_fifo.shift();
+                            child_process_handle_fifo.push(temp_child_process_handle_fifo)
+                        }
+                    } // else 
+                    // ============================ / log_cluster_child_process
+
+                } // end if from == 'log-cluster'
 
 
-                    // if (between(1, 4) == 1) {
-                    //     log_cluster_child_process1.send(message);
-                    // } else if (between(1, 4) == 2) {
-                    //     log_cluster_child_process2.send(message);
-                    // } else if (between(1, 4) == 3) {
-                    //     log_cluster_child_process3.send(message);
-                    // } else if (between(1, 4) == 4) {
-                    //     log_cluster_child_process4.send(message);
-                    // }
 
-                    // if (process.pid % 2 === 0) {
-                    //     if (between(1, 2)) {
-                    //         log_cluster_child_process1.send(message);
-                    //     } else {
-                    //         log_cluster_child_process2.send(message);
-                    //     }
-                    // } else {
-                    //     if (between(3, 4)) {
-                    //         log_cluster_child_process3.send(message);
-                    //     } else {
-                    //         log_cluster_child_process4.send(message);
-                    //     }
-                    // }
+                // if (between(1, 4) == 1) {
+                //     log_cluster_child_process1.send(message);
+                // } else if (between(1, 4) == 2) {
+                //     log_cluster_child_process2.send(message);
+                // } else if (between(1, 4) == 3) {
+                //     log_cluster_child_process3.send(message);
+                // } else if (between(1, 4) == 4) {
+                //     log_cluster_child_process4.send(message);
+                // }
 
-
-                    // if (message % 2 === 0) {
-                    //     log_cluster_child_process1.send(message);
-                    // }else {
-                    //     const worker = cluster.fork();
-                    //     // Listen for messages FROM the worker process.
-                    //     worker.on("message", (message) => {
-                    //         console.log(`[${worker.process.pid} to MASTER] \n \n`, message);
-                    //     });
-                    // }
-
-                    // if (num % 2 === 0) {
-                    //     worker1.send(num);
-                    // }
-                    // else {
-                    //     worker2.send(num);
-                    // }
+                // if (process.pid % 2 === 0) {
+                //     if (between(1, 2)) {
+                //         log_cluster_child_process1.send(message);
+                //     } else {
+                //         log_cluster_child_process2.send(message);
+                //     }
+                // } else {
+                //     if (between(3, 4)) {
+                //         log_cluster_child_process3.send(message);
+                //     } else {
+                //         log_cluster_child_process4.send(message);
+                //     }
+                // }
 
 
-                    // // https://stackoverflow.com/questions/34881343/node-js-detect-a-child-process-exit
-                    // // https://stackoverflow.com/questions/21255202/checking-if-a-child-process-is-running
-                    // // https://nodejs.org/api/child_process.html#child_process_event_exit
+                // if (message % 2 === 0) {
+                //     log_cluster_child_process1.send(message);
+                // }else {
+                //     const worker = cluster.fork();
+                //     // Listen for messages FROM the worker process.
+                //     worker.on("message", (message) => {
+                //         console.log(`[${worker.process.pid} to MASTER] \n \n`, message);
+                //     });
+                // }
+
+                // if (num % 2 === 0) {
+                //     worker1.send(num);
+                // }
+                // else {
+                //     worker2.send(num);
+                // }
 
 
-                } // else 
 
 
+
+
+
+                // // https://stackoverflow.com/questions/34881343/node-js-detect-a-child-process-exit
+                // // https://stackoverflow.com/questions/21255202/checking-if-a-child-process-is-running
+                // // https://nodejs.org/api/child_process.html#child_process_event_exit
 
 
                 // log_cluster_child_process1.on('close', function (message) {

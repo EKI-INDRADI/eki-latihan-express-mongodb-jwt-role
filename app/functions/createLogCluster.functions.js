@@ -2,9 +2,11 @@
 const fs = require('fs');
 
 
-const base_dir = require('./../../base_dir')
+const base_dir = require('../../base_dir')
 
 __basedir = base_dir.set_cluster_base_dir()
+
+const setup_console_log = require('../middlewares/enableConsoleLog')
 
 exports.createLogCluster_function = async function (data, func_name = "_", note = "_", new_dir) {
 
@@ -185,7 +187,8 @@ exports.createLogCluster_controller = async function (request) {
 
         res_json = {
             statusCode: 1,
-            message: result_create_log.message
+            message: result_create_log.message,
+            cpu_thread_handle: request.cpu_thread_handle
         }
     } catch (error) {
         res_json = {
@@ -195,7 +198,15 @@ exports.createLogCluster_controller = async function (request) {
     }
 
 
-    console.log(res_json)
+
+   
+    if (setup_console_log.enable == true) {
+        let console_log = res_json
+        delete console_log.message
+        console.log(res_json)
+    }
+
+
     return res_json
 
 }

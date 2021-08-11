@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-var logger = require('morgan');
+// var morgan = require('morgan');
 const app = express();
 
 
@@ -17,7 +17,11 @@ var corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(logger('dev'));
+// app.use(morgan('dev'));
+// app.use(morgan(':method :url, \nstatus code = :status, res[content-length] = :res[content-length], response-time = :response-time ms'));
+let morgan_middleware = require("./app/middlewares/morgan")
+// app.use(morgan_middleware(':method :url, \nstatus code = :status, res[content-length] = :res[content-length], response-time = :response-time ms'));
+ app.use(morgan_middleware)
 
 let connection = require("./app/middlewares/connection")
 connection.mongodb()
