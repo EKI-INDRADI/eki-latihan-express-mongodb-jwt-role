@@ -5,7 +5,7 @@ const cpu_threads = os.cpus().length;
 // const cpu_threads_cluster_fork = Number(Math.floor(cpu_threads / 4)) // round down // Math.ceil() // roound up
 // const cpu_threads_child_process = Number(cpu_threads - cpu_threads_cluster_fork)
 
-const cpu_threads_cluster_fork = Number(Math.floor(cpu_threads / 4)) 
+const cpu_threads_cluster_fork = Number(Math.floor(cpu_threads / 4)) // round down // Math.ceil() // roound up
 const cpu_threads_child_process = Number(cpu_threads - cpu_threads_cluster_fork)
 
 const setup_console_log = require('./enableConsoleLog')
@@ -29,7 +29,6 @@ const log_cluster_child_process16 = require("child_process").fork("./app/service
 
 
 //====== FIFO
-
 let child_process_handle_fifo = [];
 let temp_child_process_handle_fifo = 0
 //====== / FIFO
@@ -390,8 +389,6 @@ module.exports = (callback = null) => {
         });
 
 
-        //   for (let i = 0; i < cpu_threads - 2; i++) {
-
 
 
         for (let i = 0; i < cpu_threads_cluster_fork; i++) {
@@ -403,8 +400,7 @@ module.exports = (callback = null) => {
 
     }
 
-    // console.log(`Total Number of CPU threads is ${cpu_threads}`);
-    if (cluster.isMaster) { //cluster.isPrimary node 16 +
+    if (cluster.isMaster) { 
         // logic_cluster_v1()
         logic_cluster_v2()
     } else {
