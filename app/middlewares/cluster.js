@@ -2,10 +2,10 @@ const cluster = require("cluster");
 const os = require('os')
 const cpu_threads = os.cpus().length;
 
-// const cpu_threads_cluster_fork = Number(Math.floor(cpu_threads / 4)) // round down // Math.ceil() // roound up
+// const cpu_threads_cluster_fork = Number(Math.floor(cpu_threads / 4)) // round down // Math.ceil() // round up
 // const cpu_threads_child_process = Number(cpu_threads - cpu_threads_cluster_fork)
 
-const cpu_threads_cluster_fork = Number(Math.floor(cpu_threads / 4)) // round down // Math.ceil() // roound up
+const cpu_threads_cluster_fork = Number(Math.floor(cpu_threads / 4)) // round down // Math.ceil() // round up
 const cpu_threads_child_process = Number(cpu_threads - cpu_threads_cluster_fork)
 
 const setup_console_log = require('./enableConsoleLog')

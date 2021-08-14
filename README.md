@@ -30,6 +30,7 @@ update note :
 - loadtest (testing cluster & child process = multi request per second) [done]
 - automatic check undefined data with function request_validation [done]
 - update generate log file milisecond + microsecond + nanosecond [done]
+- update dynamic cpu thread (auto generate child + cluster.fork) [done]
 
 next update :
 - message broker / event driven [still rnd]
