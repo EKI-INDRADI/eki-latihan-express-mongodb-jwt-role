@@ -3688,8 +3688,7 @@ var data = {
     ],
     "func_name": "loadtest",
     "note": "request",
-    "new_dir": "loadtest_log/",
-    // "from" : "log-cluster"
+    "new_dir": "loadtest_log/"
 }
 
 
@@ -3698,8 +3697,8 @@ const options = {
     // concurrency: 5,
     method: 'POST',
     // body: "",
-    requestsPerSecond: 4,
-    maxSeconds: 5,
+    requestsPerSecond: 12,
+    maxSeconds: 60,
     statusCallback: statusCallback,
     requestGenerator: (params, options, client, callback) => {
         // const message = '{"data": {"array" : [ 1,2,3,4,5]}, "func_name": "test","note": "error","new_dir": "error_log/"}';

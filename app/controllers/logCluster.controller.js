@@ -15,8 +15,10 @@ module.exports = {
             "func_name": "test",
             "note": "error",
             "new_dir": "error_log/",
-            "from" : "log-cluster"
+            // "from" : "log-cluster"
         }
+
+        req.body.from = "log-cluster"
         process.send(req.body);
         if (setup_console_log.enable == true) {
         console.log(`Message Process PID : ${process.pid} received the request!`);
