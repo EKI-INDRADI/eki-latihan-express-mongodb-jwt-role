@@ -31,11 +31,13 @@ update note :
 - automatic check undefined data with function request_validation [done]
 - update generate log file milisecond + microsecond + nanosecond [done]
 - update dynamic cpu thread (auto generate child + cluster.fork) [done]
+- swagger [done]
+- auto generate swagger json file [onprogress]
 
 next update :
 - message broker / event driven [still rnd]
 - database caching [still rnd]
-- swagger
+
 
 
 
@@ -175,6 +177,10 @@ pm2 start ecosystem.config.js   (pm2)
 (https://www.udemy.com/course/node-js-cluster)
 
 - https://github.com/behroozk/node-cluster-tutorial
+
+- https://www.npmjs.com/package/swagger-ui-express
+
+- https://editor.swagger.io/
 
 
 

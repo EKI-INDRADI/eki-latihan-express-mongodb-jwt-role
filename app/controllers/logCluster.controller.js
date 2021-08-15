@@ -25,7 +25,9 @@ module.exports = {
         }
         ///  ======================== KIRIM PROCESS KE CLUSTER MASTER -> CHILD PROCESS
 
-       res.json({result : `Message Process PID : ${process.pid} received the request!`})
+       res.json({
+        statusCode: 1,
+        message : `Message Process PID : ${process.pid} received the request!`})
 
     },
 

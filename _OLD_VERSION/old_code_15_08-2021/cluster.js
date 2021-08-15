@@ -215,119 +215,151 @@ module.exports = (callback = null) => {
 
                 // FIFO HANDLE
                 if (cpu_threads_child_process >= 1 && child_process_handle_fifo[0] == 1) {
-                    delete message.from
-                    cluster_child_process1.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process1.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 } else if (cpu_threads_child_process >= 2 && child_process_handle_fifo[0] == 2) {
-                    delete message.from
-                    cluster_child_process2.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process2.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 } else if (cpu_threads_child_process >= 3 && child_process_handle_fifo[0] == 3) {
-                    delete message.from
-                    cluster_child_process3.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process3.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 4 && child_process_handle_fifo[0] == 4) {
-                    delete message.from
-                    cluster_child_process4.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process4.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 5 && child_process_handle_fifo[0] == 5) {
-                    delete message.from
-                    cluster_child_process5.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process5.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 6 && child_process_handle_fifo[0] == 6) {
-                    delete message.from
-                    cluster_child_process6.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process6.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 7 && child_process_handle_fifo[0] == 7) {
-                    delete message.from
-                    cluster_child_process7.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process7.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 8 && child_process_handle_fifo[0] == 8) {
-                    delete message.from
-                    cluster_child_process8.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process8.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
 
                 else if (cpu_threads_child_process >= 9 && child_process_handle_fifo[0] == 9) {
-                    delete message.from
-                    cluster_child_process9.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process9.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
 
                 else if (cpu_threads_child_process >= 10 && child_process_handle_fifo[0] == 10) {
-                    delete message.from
-                    cluster_child_process10.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process10.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
 
                 else if (cpu_threads_child_process >= 11 && child_process_handle_fifo[0] == 11) {
-                    delete message.from
-                    cluster_child_process11.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process11.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
 
                 else if (cpu_threads_child_process >= 12 && child_process_handle_fifo[0] == 12) {
-                    delete message.from
-                    cluster_child_process12.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process12.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
 
                 else if (cpu_threads_child_process >= 13 && child_process_handle_fifo[0] == 13) {
-                    delete message.from
-                    cluster_child_process13.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process13.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
 
                 else if (cpu_threads_child_process >= 14 && child_process_handle_fifo[0] == 14) {
-                    delete message.from
-                    cluster_child_process14.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process14.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
 
                 else if (cpu_threads_child_process >= 15 && child_process_handle_fifo[0] == 15) {
-                    delete message.from
-                    cluster_child_process15.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process15.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
 
                 else if (cpu_threads_child_process >= 16 && child_process_handle_fifo[0] == 16) {
-                    delete message.from
-                    cluster_child_process16.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process16.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
@@ -335,8 +367,10 @@ module.exports = (callback = null) => {
 
                 else {
                     console.log("error logic fifo gak bener nih")
-                    delete message.from
-                    cluster_child_process1.send(message);
+                    if (message && message.from == 'log-cluster') {
+                        delete message.from
+                        cluster_child_process1.send(message);
+                    }
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
