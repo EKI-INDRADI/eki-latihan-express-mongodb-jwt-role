@@ -32,6 +32,7 @@ update note :
 - update generate log file milisecond + microsecond + nanosecond [done]
 - update dynamic cpu thread (auto generate child + cluster.fork) [done]
 - swagger [done]
+- update dynamic func & controller send process to child_process [done]
 - auto generate swagger json file [onprogress]
 
 next update :
@@ -105,7 +106,8 @@ npm run start:cluster   (nodemon)
 pm2 start ecosystem.config.js   (pm2)
 ```
 
-- backend akan berjalan pada port 8080
+- app listen port 8080
+- swagger listen port 7000
 
 
 
@@ -129,6 +131,9 @@ pm2 start ecosystem.config.js   (pm2)
 
 - create file log 
 
+- swagger documentation
+
+- fitur aplikasi tidak akan di tambah (dari sisi fitur aplikasi), tujuan framework ini adalah di persiapan untuk handle event driven (message broker / data realtime & security yang cukup baik) , karena untuk fitur aplikasi crud banyak yang bisa (programmer baru lulus juga bisa CRUD, tapi sclable & optimize performance hanya akan ada pertanyaan jika kamu melamar sebagai senior backend engginer/atau jabatan yang lebih tinggi).
 
 
 
