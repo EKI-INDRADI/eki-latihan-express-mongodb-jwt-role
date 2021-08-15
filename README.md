@@ -32,7 +32,7 @@ update note :
 - update generate log file milisecond + microsecond + nanosecond [done]
 - update dynamic cpu thread (auto generate child + cluster.fork) [done]
 - swagger [done]
-- update dynamic func & controller send process to child_process [done]
+- update dynamic request (func & controller) send process master to child_process [done]
 - auto generate swagger json file [onprogress]
 
 next update :
