@@ -1,0 +1,13 @@
+{
+  totalRequests: 6669,
+  totalErrors: 0,
+  totalTimeSeconds: 12.0075856,
+  rps: 555,
+  meanLatencyMs: 9.6,
+  maxLatencyMs: 67,
+  minLatencyMs: 5,
+  percentiles: { '50': 9, '90': 12, '95': 13, '99': 17 },
+  errorCodes: {},
+  instanceIndex: 0
+}
+Tests run successfully

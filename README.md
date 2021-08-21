@@ -34,6 +34,7 @@ update note :
 - swagger [done]
 - update dynamic request (func & controller) send process master to child_process [done]
 - auto generate swagger json file [onprogress]
+- update expressjs performance [done]
 
 next update :
 - message broker / event driven [still rnd]

@@ -1,0 +1,12 @@
+{
+  totalRequests: 9338,
+  totalErrors: 7086,
+  totalTimeSeconds: 12.0024529,
+  rps: 778,
+  meanLatencyMs: 166.9,
+  maxLatencyMs: 6851,
+  minLatencyMs: 1,
+  percentiles: { '50': 2, '90': 14, '95': 18, '99': 6790 },
+  errorCodes: { '-1': 7086 },
+  instanceIndex: 0
+}

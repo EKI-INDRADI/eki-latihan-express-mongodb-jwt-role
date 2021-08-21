@@ -5,7 +5,7 @@ var loadtest = require('loadtest');
 function statusCallback(error, result, latency) {
     console.log('Current latency %j, result %j, error %j', latency, result, error);
     console.log('----');
-    console.log('Request elapsed milliseconds: ', result.requestElapsed);
+    console.log('Request elapsed milliseconds (low is better): ', result.requestElapsed);
     console.log('Request index: ', result.requestIndex);
     console.log('Request loadtest() instance index: ', result.instanceIndex);
 }
@@ -3697,9 +3697,9 @@ const options = {
     // concurrency: 5,
     method: 'POST',
     // body: "",
-    requestsPerSecond: 12,
-    maxSeconds: 60,
-    statusCallback: statusCallback,
+    requestsPerSecond: 1000,
+    maxSeconds: 12,
+    // statusCallback: statusCallback,
     requestGenerator: (params, options, client, callback) => {
         // const message = '{"data": {"array" : [ 1,2,3,4,5]}, "func_name": "test","note": "error","new_dir": "error_log/"}';
 
@@ -3707,7 +3707,7 @@ const options = {
         options.headers['Content-Length'] = message.length;
         options.headers['Content-Type'] = 'application/json';
         // options.body = '';
-        options.path = '/api/log-cluster/create'
+        options.path = '/api/log/create'
         const request = client(options, callback);
         request.write(message);
         return request;

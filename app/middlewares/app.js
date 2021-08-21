@@ -2,6 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const compression = require('compression')
+
+
 var corsOptions = {
   //origin: "http://localhost:4200"
   origin: "*"
@@ -10,12 +13,19 @@ var corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+//=========== update performance
+app.use(compression())
+app.disable('etag')
+app.disable('x-powered-by')
+//=========== /update performance
 
 let morgan_middleware = require("./morgan")
 app.use(morgan_middleware)
 
 let connection = require("./connection")
 connection.mongodb()
+
+
 
 exports.PORT_APP = 8080
 
@@ -27,7 +37,7 @@ exports.app_middleware = function (base_dir) {
     res.json({ message: "Backend OK" });
   });
 
-  require("../routes/pasien.routes")(app); 
+  require("../routes/pasien.routes")(app);
   require("../routes/antrian.routes")(app);
 
   // ===================================== JWT MODULE - ADMIN ROLE
@@ -44,7 +54,9 @@ exports.app_middleware = function (base_dir) {
   require("../routes/logCluster.routes")(app);
   // ===================================== SYSTEM LOG
 
-
+  // ===================================== DYNAMIC VALIDATION
+  require("../routes/dynamicValidation.routes")(app);
+  // ===================================== DYNAMIC VALIDATION
 
   const PORT = process.env.PORT_APP || exports.PORT_APP;
   app.listen(PORT, () => {

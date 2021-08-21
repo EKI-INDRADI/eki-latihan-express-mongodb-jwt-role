@@ -1,0 +1,14 @@
+12 thread
+
+{
+  totalRequests: 6131,
+  totalErrors: 0,
+  totalTimeSeconds: 12.0071537,
+  rps: 511,
+  meanLatencyMs: 10.5,
+  maxLatencyMs: 68,
+  minLatencyMs: 5,
+  percentiles: { '50': 9, '90': 13, '95': 14, '99': 18 },
+  errorCodes: {},
+  instanceIndex: 0
+}

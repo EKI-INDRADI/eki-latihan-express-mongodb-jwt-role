@@ -1,0 +1,14 @@
+{
+  "name": "autocannon_cluster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "autocannon_cluster.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autocannon": "^7.4.0"
+  }
+}
