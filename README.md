@@ -135,6 +135,8 @@ pm2 start ecosystem.config.js   (pm2)
 
 - swagger documentation
 
+- auto check validation (undefined, schema, length) data request (req.body) with dynamicValidation.controller.js & function request_validation.js 
+ 
 - fitur aplikasi tidak akan di tambah (dari sisi fitur aplikasi), tujuan framework ini adalah di persiapan untuk handle event driven (message broker / data realtime & security yang cukup baik) , karena untuk fitur aplikasi crud banyak yang bisa (programmer baru lulus juga bisa CRUD, tapi sclable & optimize performance hanya akan ada pertanyaan jika kamu melamar sebagai senior backend engginer/atau jabatan yang lebih tinggi).
 
 
@@ -188,6 +190,10 @@ pm2 start ecosystem.config.js   (pm2)
 - https://www.npmjs.com/package/swagger-ui-express
 
 - https://editor.swagger.io/
+
+- https://stackoverflow.com/
+
+- 
 
 
 
