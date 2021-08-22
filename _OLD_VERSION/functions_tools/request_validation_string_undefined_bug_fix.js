@@ -11,6 +11,7 @@ let isDate = function (date) {
 let bug_fix_undefined_null_string_length = function (data) {
   // bug fix
   // bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]) -> bug_fix_undefined_null_string_length(Object.values(check_data)[index_array])
+
   let bug_fix_undefined_null_string
 
   if (data == undefined) {

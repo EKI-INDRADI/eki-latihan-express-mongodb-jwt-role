@@ -8,23 +8,6 @@ let isDate = function (date) {
   return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
 };
 
-let bug_fix_undefined_null_string_length = function (data) {
-  // bug fix
-  // bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]) -> bug_fix_undefined_null_string_length(Object.values(check_data)[index_array])
-  let bug_fix_undefined_null_string
-
-  if (data == undefined) {
-      bug_fix_undefined_null_string = 0;
-
-  } else if (data == null) {
-      bug_fix_undefined_null_string = 0;
-  } else {
-      bug_fix_undefined_null_string = ("" + data).length;
-  }
-  return bug_fix_undefined_null_string
-}
-
-
 exports.check_all_data_schema_length = async function (data, schema, length) {
 
   // 20-08-2021
@@ -443,7 +426,7 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
       } else {
         if (Object.values(check_data)[index_array].includes(" ")) {  // bug fix isNan 22-08-2021 , "level 5" << true  , "level5" << false
           data_type = 'string'; // jika ada " " langsung anggap string
-        } else if (bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]) < ("22-08-2021").length) {  // bug fix is Nan 22-08-2021 , "0-1"  ( 10  length= "22-08-2021"  )
+        } else if (Object.values(check_data)[index_array].toString().length < ("22-08-2021").length) {  // bug fix is Nan 22-08-2021 , "0-1"  ( 10  length= "22-08-2021"  )
           data_type = 'string';
         } else {
           data_type = 'date';
@@ -535,14 +518,14 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
       length_valid = true;
       total_length_valid = total_length_valid + 1;
 
-    } else if (Object.values(check_length)[index_array] >= bug_fix_undefined_null_string_length(Object.values(check_data)[index_array])) {
+    } else if (Object.values(check_length)[index_array] >= Object.values(check_data)[index_array].toString().length) {
       length_valid = true;
       total_length_valid = total_length_valid + 1;
 
     } else {
       length_valid = false;
 
-      let key_error = Object.keys(check_data)[index_array], object_dynamic_error = { [key_error]: bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]), length: length_valid, max_length_required: Object.values(check_length)[index_array] };
+      let key_error = Object.keys(check_data)[index_array], object_dynamic_error = { [key_error]: Object.values(check_data)[index_array].toString().length, length: length_valid, max_length_required: Object.values(check_length)[index_array] };
       length_array_error.push(object_dynamic_error);
 
 
@@ -580,7 +563,7 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
       check_validation_length_value = true
     } else {
 
-      if (Object.values(check_length)[index_array] < bug_fix_undefined_null_string_length(Object.values(check_data)[index_array])) {
+      if (Object.values(check_length)[index_array] < Object.values(check_data)[index_array].toString().length) {
         check_validation_length_value = false
       } else {
         check_validation_length_value = true
@@ -588,7 +571,7 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
 
     } //end if
 
-    console.log("[" + data_type + "] " + Object.values(check_length)[index_array] + " vs " + bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]) + " " + check_validation_length_value)
+    console.log("[" + data_type + "] " + Object.values(check_length)[index_array] + " vs " + Object.values(check_data)[index_array].toString().length + " " + check_validation_length_value)
 
     if (typeof check_data[(Object.keys(check_data)[index_array])] == 'undefined' ||
       ((Object.values(check_schema)[index_array]) ? Object.values(check_schema)[index_array] : null) != data_type ||
@@ -596,13 +579,13 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
 
       //============= perlu cek 
       // (Object.values(check_length)[index_array] != skip_check) ?  
-      // (Object.values(check_length)[index_array] < bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]))
+      // (Object.values(check_length)[index_array] < Object.values(check_data)[index_array].toString().length)
       //  : false
 
 
     ) {
 
-      // console.log(bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]) + " vs " + Object.values(check_length)[index_array] + " error length")       // number length perlu di cek
+      // console.log(Object.values(check_data)[index_array].toString().length + " vs " + Object.values(check_length)[index_array] + " error length")       // number length perlu di cek
 
       let all_key_error = Object.keys(check_data)[index_array], object_dynamic_error = {
         [all_key_error]: data_type,

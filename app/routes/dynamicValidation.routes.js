@@ -11,6 +11,7 @@ module.exports = app => {
 
 
     router.post("/", controller.dynamicValidation);
+    router.post("/detail", controller.dynamicValidation_detail);
 
     // USER ROLE
     // router.post("/", [authJwt.verifyToken], controller.dynamicValidation);

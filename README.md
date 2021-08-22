@@ -35,6 +35,7 @@ update note :
 - update dynamic request (func & controller) send process master to child_process [done]
 - auto generate swagger json file [onprogress]
 - update expressjs performance [done]
+- update automatic dynamic check undefined + schema + length , data validation with function request_validation ( controller dynamicValidation.controller) [done]
 
 next update :
 - message broker / event driven [still rnd]
