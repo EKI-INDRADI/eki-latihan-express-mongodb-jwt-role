@@ -14,12 +14,12 @@ let bug_fix_undefined_null_string_length = function (data) {
   let bug_fix_undefined_null_string
 
   if (data == undefined) {
-      bug_fix_undefined_null_string = 0;
+    bug_fix_undefined_null_string = 0;
 
   } else if (data == null) {
-      bug_fix_undefined_null_string = 0;
+    bug_fix_undefined_null_string = 0;
   } else {
-      bug_fix_undefined_null_string = ("" + data).length;
+    bug_fix_undefined_null_string = ("" + data).length;
   }
   return bug_fix_undefined_null_string
 }
@@ -35,311 +35,8 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
   // 21-08-2021
   // update length 
 
-
-  // ========= inject code example
-
-  // const request_validation = require('../functions/tools/request_validation');
-
-  // let data_validation_value = {
-  //   company_id: req.body.company_id,
-  //   site: req.body.site,
-  //   document_type: req.body.document_type,
-  //   "requester.username": req.body.requester.username,
-  //   data: req.body.data
-  // };
-
-
-  // let data_validation_schema = {
-  //   company_id: "string",
-  //   site: "string",
-  //   document_type: "number",
-  //   "requester.username": "string",
-  //   data: "array"
-  // };
-
-  // check_data = await request_validation.check_all(data_validation_value, data_validation_schema);
-
-  // if (check_data.statusCode == 1) {
-  //   // res.json(check_data) // valid condition
-  // } else {
-  //   res.json(check_data) // error condition
-  // }
-  // ========= inject code example
-
-
-  let example_request_valid = {
-    "company_id": "test",
-    "site": "test",
-    "document_type": 1,
-    "requester": { "username": "test" },
-    "data": [{ "test2": 1, "test3": 2 }]
-  };
-
-
-  let example_request_error = {
-    "site": 2,
-    "document_type": { "data": 1 },
-    "requester": { "username": "test" },
-    "data": [{ "test2": 1, "test3": 2 }]
-  };
-
-
-  let valid_response = {
-    "statusCode": 1,
-    "message": "valid",
-    "data": [
-      {
-        "company_id": "string",
-        "not_undefined": true,
-        "schema": true,
-        "schema_type_required": "string"
-      },
-      {
-        "site": "string",
-        "not_undefined": true,
-        "schema": true,
-        "schema_type_required": "string"
-      },
-      {
-        "document_type": "number",
-        "not_undefined": true,
-        "schema": true,
-        "schema_type_required": "number"
-      },
-      {
-        "requester.username": "string",
-        "not_undefined": true,
-        "schema": true,
-        "schema_type_required": "string"
-      },
-      {
-        "data": "array",
-        "not_undefined": true,
-        "schema": true,
-        "schema_type_required": "array"
-      }
-    ]
-  };
-
-
-
-  let error_response = {
-    "statusCode": 0,
-    "message": "error",
-    "all_error": [
-      {
-        "company_id": "undefined",
-        "not_undefined": false,
-        "schema": false,
-        "schema_type_required": "string"
-      },
-      {
-        "site": "number",
-        "not_undefined": true,
-        "schema": false,
-        "schema_type_required": "string"
-      },
-      {
-        "document_type": "object",
-        "not_undefined": true,
-        "schema": false,
-        "schema_type_required": "number"
-      }
-    ],
-    "all_error_index": [
-      0,
-      1,
-      2
-    ],
-    "all_error_key": [
-      "company_id",
-      "site",
-      "document_type"
-    ],
-    "all_value_index": [
-      1,
-      2,
-      3
-    ],
-    "all_value": [
-      {
-        "site": 2,
-        "document_type": {
-          "data": 1
-        },
-        "requester.username": "test",
-        "data": [
-          {
-            "test2": 1,
-            "test3": 2
-          }
-        ]
-      },
-      {
-        "site": 2,
-        "document_type": {
-          "data": 1
-        },
-        "requester.username": "test",
-        "data": [
-          {
-            "test2": 1,
-            "test3": 2
-          }
-        ]
-      },
-      {
-        "site": 2,
-        "document_type": {
-          "data": 1
-        },
-        "requester.username": "test",
-        "data": [
-          {
-            "test2": 1,
-            "test3": 2
-          }
-        ]
-      }
-    ],
-    "undefined_error": [
-      {
-        "company_id": "undefined",
-        "not_undefined": false
-      }
-    ],
-    "undefined_error_index": [
-      0
-    ],
-    "undefined_error_key": [
-      "company_id"
-    ],
-    "undefined_value_index": [
-      1
-    ],
-    "undefined_value": [
-      {
-        "site": 2,
-        "document_type": {
-          "data": 1
-        },
-        "requester.username": "test",
-        "data": [
-          {
-            "test2": 1,
-            "test3": 2
-          }
-        ]
-      }
-    ],
-    "schema_error": [
-      {
-        "company_id": "undefined",
-        "schema": false,
-        "schema_type_required": "string"
-      },
-      {
-        "site": "number",
-        "schema": false,
-        "schema_type_required": "string"
-      },
-      {
-        "document_type": "object",
-        "schema": false,
-        "schema_type_required": "number"
-      }
-    ],
-    "schema_error_index": [
-      0,
-      1,
-      2
-    ],
-    "schema_error_key": [
-      "company_id",
-      "site",
-      "document_type"
-    ],
-    "schema_value_index": [
-      1,
-      2,
-      3
-    ],
-    "schema_value": [
-      {
-        "site": 2,
-        "document_type": {
-          "data": 1
-        },
-        "requester.username": "test",
-        "data": [
-          {
-            "test2": 1,
-            "test3": 2
-          }
-        ]
-      },
-      {
-        "site": 2,
-        "document_type": {
-          "data": 1
-        },
-        "requester.username": "test",
-        "data": [
-          {
-            "test2": 1,
-            "test3": 2
-          }
-        ]
-      },
-      {
-        "site": 2,
-        "document_type": {
-          "data": 1
-        },
-        "requester.username": "test",
-        "data": [
-          {
-            "test2": 1,
-            "test3": 2
-          }
-        ]
-      }
-    ],
-    "data": [
-      {
-        "company_id": "undefined",
-        "not_undefined": false,
-        "schema": false,
-        "schema_type_required": "string"
-      },
-      {
-        "site": "number",
-        "not_undefined": true,
-        "schema": false,
-        "schema_type_required": "string"
-      },
-      {
-        "document_type": "object",
-        "not_undefined": true,
-        "schema": false,
-        "schema_type_required": "number"
-      },
-      {
-        "requester.username": "string",
-        "not_undefined": true,
-        "schema": true,
-        "schema_type_required": "string"
-      },
-      {
-        "data": "array",
-        "not_undefined": true,
-        "schema": true,
-        "schema_type_required": "array"
-      }
-    ]
-  };
-
-
+  // 23-08-2021 
+  // "type required " + Object.values(check_schema)[index_array] ->  "type required " + static_type_required
 
 
   let check_data = data;
@@ -430,6 +127,8 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
     } else if (Object.values(check_data)[index_array] &&
       isDate(Object.values(check_data)[index_array]) == true) { //isDate check date
 
+
+
       if (isNaN(Object.values(check_data)[index_array]) == false) {   // isNan  string check is valid number
         // isNaN(123)         // false
         // isNaN('123')       // false
@@ -441,6 +140,7 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
         // isNaN(false)       // false
         data_type = 'string';
       } else {
+
         if (Object.values(check_data)[index_array].includes(" ")) {  // bug fix isNan 22-08-2021 , "level 5" << true  , "level5" << false
           data_type = 'string'; // jika ada " " langsung anggap string
         } else if (bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]) < ("22-08-2021").length) {  // bug fix is Nan 22-08-2021 , "0-1"  ( 10  length= "22-08-2021"  )
@@ -498,6 +198,16 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
 
 
     //===================== schema
+
+    //========= 23-08-2021
+    let static_type_required
+    if (Object.values(check_schema)[index_array] == 'date') {
+      static_type_required = "date (YYYY-MM-DD)"
+    } else {
+      static_type_required = Object.values(check_schema)[index_array]
+    }
+    //========= / 23-08-2021
+
     if (((Object.values(check_schema)[index_array]) ? Object.values(check_schema)[index_array] : null) == data_type) {
       schema_valid = true;
       total_schema_valid = total_schema_valid + 1;
@@ -505,13 +215,13 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
     } else {
       schema_valid = false;
 
-      let key_error = Object.keys(check_data)[index_array], object_dynamic_error = { [key_error]: data_type, schema: schema_valid, schema_type_required: Object.values(check_schema)[index_array] };
+      let key_error = Object.keys(check_data)[index_array], object_dynamic_error = { [key_error]: data_type, schema: schema_valid, schema_type_required: static_type_required}; // 23-08-2021 Object.values(check_schema)[index_array] ->  static_type_required
       data_schema_array_error.push(object_dynamic_error);
 
 
       //========= 20-08-2021
       let data_schema_object_error_key_child = Object.keys(check_data)[index_array],
-        data_schema_push_error_key_object_dynamic_error = { [data_schema_object_error_key_child]: "type required " + Object.values(check_schema)[index_array] };
+        data_schema_push_error_key_object_dynamic_error = { [data_schema_object_error_key_child]: "type required " + static_type_required }; //Object.values(check_schema)[index_array]
       data_schema_object_error_key = Object.assign(JSON.parse(JSON.stringify(all_object_error_key)), data_schema_push_error_key_object_dynamic_error);
       //========= 20-08-2021
 
@@ -588,7 +298,7 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
 
     } //end if
 
-    console.log("[" + data_type + "] " + Object.values(check_length)[index_array] + " vs " + bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]) + " " + check_validation_length_value)
+    // console.log("[" + data_type + "] " + Object.values(check_length)[index_array] + " vs " + bug_fix_undefined_null_string_length(Object.values(check_data)[index_array]) + " " + check_validation_length_value)
 
     if (typeof check_data[(Object.keys(check_data)[index_array])] == 'undefined' ||
       ((Object.values(check_schema)[index_array]) ? Object.values(check_schema)[index_array] : null) != data_type ||
@@ -636,7 +346,7 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
         }
 
         all_object_error_key_child = Object.keys(check_data)[index_array],
-          all_push_error_key_object_dynamic_error = { [all_object_error_key_child]: "undefined, " + "type required " + Object.values(check_schema)[index_array] + ", " + length_object_error_key_child_value };
+          all_push_error_key_object_dynamic_error = { [all_object_error_key_child]: "undefined, " + "type required " + static_type_required + ", " + length_object_error_key_child_value }; // 23-08-2021 Object.values(check_schema)[index_array] ->  static_type_required
 
         all_object_error_key = Object.assign(JSON.parse(JSON.stringify(all_object_error_key)), all_push_error_key_object_dynamic_error);
 
@@ -649,13 +359,13 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
         }
 
         all_object_error_key_child = Object.keys(check_data)[index_array],
-          all_push_error_key_object_dynamic_error = { [all_object_error_key_child]: "type required " + Object.values(check_schema)[index_array] + ", " + length_object_error_key_child_value };
+          all_push_error_key_object_dynamic_error = { [all_object_error_key_child]: "type required " + static_type_required + ", " + length_object_error_key_child_value }; // 23-08-2021 Object.values(check_schema)[index_array] ->  static_type_required
 
         all_object_error_key = Object.assign(JSON.parse(JSON.stringify(all_object_error_key)), all_push_error_key_object_dynamic_error);
 
       } else if (schema_valid == false && data_valid == false) {
         all_object_error_key_child = Object.keys(check_data)[index_array],
-          all_push_error_key_object_dynamic_error = { [all_object_error_key_child]: "undefined, " + "type required " + Object.values(check_schema)[index_array] };
+          all_push_error_key_object_dynamic_error = { [all_object_error_key_child]: "undefined, " + "type required " + static_type_required }; // 23-08-2021 Object.values(check_schema)[index_array] ->  static_type_required
 
         all_object_error_key = Object.assign(JSON.parse(JSON.stringify(all_object_error_key)), all_push_error_key_object_dynamic_error);
 
@@ -674,7 +384,7 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
 
       } else if (schema_valid == false) {
         all_object_error_key_child = Object.keys(check_data)[index_array],
-          all_push_error_key_object_dynamic_error = { [all_object_error_key_child]: "type required " + Object.values(check_schema)[index_array] };
+          all_push_error_key_object_dynamic_error = { [all_object_error_key_child]: "type required " + static_type_required }; // // 23-08-2021 Object.values(check_schema)[index_array] ->  static_type_required
 
         all_object_error_key = Object.assign(JSON.parse(JSON.stringify(all_object_error_key)), all_push_error_key_object_dynamic_error);
 
@@ -717,7 +427,7 @@ exports.check_all_data_schema_length = async function (data, schema, length) {
 
 
 
-    var key = Object.keys(check_data)[index_array], object_dynamic = { [key]: data_type, not_undefined: data_valid, schema: schema_valid, schema_type_required: Object.values(check_schema)[index_array], length: length_valid, };
+    var key = Object.keys(check_data)[index_array], object_dynamic = { [key]: data_type, not_undefined: data_valid, schema: schema_valid, schema_type_required: static_type_required, length: length_valid, }; // // 23-08-2021 Object.values(check_schema)[index_array] ->  static_type_required
 
     data_array.push(object_dynamic);
 
