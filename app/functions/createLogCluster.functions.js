@@ -158,6 +158,7 @@ exports.createLogCluster_function = async function (data, func_name = "_", note 
 
 exports.createLogCluster_controller = async function (request) {
 
+
     let params_create_log = {}
 
     if (request.data) {

@@ -58,6 +58,11 @@ exports.app_middleware = function (base_dir) {
   require("../routes/dynamicValidation.routes")(app);
   // ===================================== DYNAMIC VALIDATION
 
+
+  //====================================== SWAGGER
+  require("../routes/swagger.routes")(app);
+  //====================================== SWAGGER
+
   const PORT = process.env.PORT_APP || exports.PORT_APP;
   app.listen(PORT, () => {
     // console.log(`Server is running on port ${PORT}.`);

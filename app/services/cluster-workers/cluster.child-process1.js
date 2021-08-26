@@ -3,6 +3,7 @@ const cluster_config = require("../cluster-config/config")
 
 
 process.on('message', data => {
+
     if (data) {
         data.cpu_thread_handle = 1
     }

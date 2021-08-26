@@ -15,7 +15,10 @@ let res_json = {}
 
 exports.condition = (data, callback_return) => {
 
+
+
     if (data.from == "log-cluster") {
+        delete data.from
         res_json = createLogCluster_function.createLogCluster_controller(data);
     }
 

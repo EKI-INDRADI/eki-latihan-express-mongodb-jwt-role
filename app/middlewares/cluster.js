@@ -9,7 +9,7 @@ const cpu_threads_cluster_fork =  Number(Math.floor(cpu_threads / 4)) // round d
 const cpu_threads_child_process = Number(cpu_threads - cpu_threads_cluster_fork)
 
 const setup_console_log = require('./enableConsoleLog')
-const swagger = require('./swagger')
+// const swagger = require('./swagger')
 const app = require('./app')
 
 const cluster_child_process1 = require("child_process").fork("./app/services/cluster-workers/cluster.child-process1");
@@ -48,9 +48,14 @@ module.exports = (callback = null) => {
 
         console.log(`All multi thread PID : ${process.pid}`);
 
+   
+
         if (cpu_threads_child_process >= 1) {
             console.log(`(cpu thread 1) (single thread -> synchronous) child process PID : ${cluster_child_process1.pid}`);
             cluster_child_process1.on('message', function (message) {
+
+          
+
                 if (setup_console_log.enable == true) {
                     console.log(`Message received from (cpu thread 1) child process PID : ${cluster_child_process1.pid} \nmessage (cpu thread 1) : ${message}`);
                 }
@@ -210,59 +215,60 @@ module.exports = (callback = null) => {
 
 
             worker.on("message", message => {
-
+          
+    
                 // ============================ cluster_child_process
 
                 // FIFO HANDLE
                 if (cpu_threads_child_process >= 1 && child_process_handle_fifo[0] == 1) {
-                    delete message.from
+                    
                     cluster_child_process1.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 } else if (cpu_threads_child_process >= 2 && child_process_handle_fifo[0] == 2) {
-                    delete message.from
+                    
                     cluster_child_process2.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 } else if (cpu_threads_child_process >= 3 && child_process_handle_fifo[0] == 3) {
-                    delete message.from
+                    
                     cluster_child_process3.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 4 && child_process_handle_fifo[0] == 4) {
-                    delete message.from
+                    
                     cluster_child_process4.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 5 && child_process_handle_fifo[0] == 5) {
-                    delete message.from
+                    
                     cluster_child_process5.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 6 && child_process_handle_fifo[0] == 6) {
-                    delete message.from
+                    
                     cluster_child_process6.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 7 && child_process_handle_fifo[0] == 7) {
-                    delete message.from
+                    
                     cluster_child_process7.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
                     child_process_handle_fifo.push(temp_child_process_handle_fifo)
                 }
                 else if (cpu_threads_child_process >= 8 && child_process_handle_fifo[0] == 8) {
-                    delete message.from
+                    
                     cluster_child_process8.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -270,7 +276,7 @@ module.exports = (callback = null) => {
                 }
 
                 else if (cpu_threads_child_process >= 9 && child_process_handle_fifo[0] == 9) {
-                    delete message.from
+                    
                     cluster_child_process9.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -278,7 +284,7 @@ module.exports = (callback = null) => {
                 }
 
                 else if (cpu_threads_child_process >= 10 && child_process_handle_fifo[0] == 10) {
-                    delete message.from
+                    
                     cluster_child_process10.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -286,7 +292,7 @@ module.exports = (callback = null) => {
                 }
 
                 else if (cpu_threads_child_process >= 11 && child_process_handle_fifo[0] == 11) {
-                    delete message.from
+                    
                     cluster_child_process11.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -294,7 +300,7 @@ module.exports = (callback = null) => {
                 }
 
                 else if (cpu_threads_child_process >= 12 && child_process_handle_fifo[0] == 12) {
-                    delete message.from
+                    
                     cluster_child_process12.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -302,7 +308,7 @@ module.exports = (callback = null) => {
                 }
 
                 else if (cpu_threads_child_process >= 13 && child_process_handle_fifo[0] == 13) {
-                    delete message.from
+                    
                     cluster_child_process13.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -310,7 +316,7 @@ module.exports = (callback = null) => {
                 }
 
                 else if (cpu_threads_child_process >= 14 && child_process_handle_fifo[0] == 14) {
-                    delete message.from
+                    
                     cluster_child_process14.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -318,7 +324,7 @@ module.exports = (callback = null) => {
                 }
 
                 else if (cpu_threads_child_process >= 15 && child_process_handle_fifo[0] == 15) {
-                    delete message.from
+                    
                     cluster_child_process15.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -326,7 +332,7 @@ module.exports = (callback = null) => {
                 }
 
                 else if (cpu_threads_child_process >= 16 && child_process_handle_fifo[0] == 16) {
-                    delete message.from
+                    
                     cluster_child_process16.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -335,7 +341,7 @@ module.exports = (callback = null) => {
 
                 else {
                     console.log("error logic fifo gak bener nih")
-                    delete message.from
+                    
                     cluster_child_process1.send(message);
                     temp_child_process_handle_fifo = child_process_handle_fifo[0]
                     child_process_handle_fifo.shift();
@@ -361,7 +367,8 @@ module.exports = (callback = null) => {
         }
 
         console.log(`[total cpu thread : ${cpu_threads}] [total child process : ${cpu_threads_child_process}] [total worker cluster fork : ${cpu_threads_cluster_fork}] started`);
-        console.log(`PORT : [APP : ${app.PORT_APP}] [SWAGGER : ${swagger.PORT_SWAGGER}]`)
+        console.log(`PORT : [APP : ${app.PORT_APP}] `) //[SWAGGER : ${swagger.PORT_SWAGGER}]
+        console.log(`URL : [SWAGGER : http://localhost:8080/api-docs ]`) 
     }
 
     if (cluster.isMaster) {
