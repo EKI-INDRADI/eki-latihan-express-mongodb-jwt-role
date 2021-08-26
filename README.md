@@ -33,9 +33,10 @@ update note :
 - update dynamic cpu thread (auto generate child + cluster.fork) [done]
 - swagger [done]
 - update dynamic request (func & controller) send process master to child_process [done]
-- auto generate swagger json file [onprogress]
+- simple (routes-model-controller) generate swagger json file (documentation) [done]
 - update expressjs performance [done]
 - update automatic dynamic check undefined + schema + length , data validation with function request_validation ( controller dynamicValidation.controller) [done]
+- automatic generate swagger json file (documentation) [onprogress]
 
 next update :
 - message broker / event driven [still rnd]
@@ -109,7 +110,7 @@ pm2 start ecosystem.config.js   (pm2)
 ```
 
 - app listen port 8080
-- swagger listen port 7000
+- swagger http://localhost:8080/api-docs
 
 
 
