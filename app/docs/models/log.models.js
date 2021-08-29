@@ -19,7 +19,7 @@ module.exports = {
                 example: "request",
             },
             new_dir: {
-                type: "new_dir",
+                type: "string",
                 description: "desc new_dir",
                 example: "swagger_log/",
             },

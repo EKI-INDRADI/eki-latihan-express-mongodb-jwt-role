@@ -33,10 +33,11 @@ update note :
 - update dynamic cpu thread (auto generate child + cluster.fork) [done]
 - swagger [done]
 - update dynamic request (func & controller) send process master to child_process [done]
-- simple (routes-model-controller) generate swagger json file (documentation) [done]
+- swagger OpenAPI Specification 3 - JSON file (routes-model-controller) [done]
 - update expressjs performance [done]
 - update automatic dynamic check undefined + schema + length , data validation with function request_validation ( controller dynamicValidation.controller) [done]
-- automatic generate swagger json file (documentation) [onprogress]
+- swagger OpenAPI Specification 3 - UPDATE JWT AUTHENTICATION [done]
+- swagger OpenAPI Specification 3 - AUTOGENERATE JS/JSON FILE SWAGGER DOCUMENT (LIKE LOOPBACK) [inprogress]
 
 next update :
 - message broker / event driven [still rnd]
@@ -170,11 +171,11 @@ pm2 start ecosystem.config.js   (pm2)
 
 # Referensi : 
 
-- https://bezkoder.com/category/node-js/
+- https://bezkoder.com/category/node-js/  (Many thanks to bezkoder)
 
-- https://bezkoder.com/node-js-mongodb-auth-jwt/
+- https://bezkoder.com/node-js-mongodb-auth-jwt/  (Many thanks to bezkoder)
 
-- Programmer Zaman Now Vlog - Eko Kurniawan Khannedy 
+- Programmer Zaman Now Vlog - Eko Kurniawan Khannedy  (Many thanks to Eko Kurniawan Khannedy, The Inspired Concept)
 
 (https://www.youtube.com/watch?v=3PMLwe_C-F0&list=PL-CtdCApEFH-aVPPDMSfNmKVZghCyGpBQ)
 
@@ -184,17 +185,19 @@ pm2 start ecosystem.config.js   (pm2)
 
 - Udemy - Pravinkumar Dabade 
 
-(https://www.udemy.com/course/node-js-cluster)
+(https://www.udemy.com/course/node-js-cluster) (Many thanks to Pravinkumar Dabade)
 
 - https://github.com/behroozk/node-cluster-tutorial
 
 - https://www.npmjs.com/package/swagger-ui-express
 
-- https://editor.swagger.io/
-
 - https://stackoverflow.com/
 
-- 
+- https://editor.swagger.io/ (OpenAPI Specification 3 / SWAGGER VERSION 3)
+
+- https://swagger.io/docs/specification/authentication/ (OpenAPI Specification 3)
+
+- https://github.com/mwangiKibui/node.js-rest-api-documentation (Many thanks to mwangiKibui)
 
 
 

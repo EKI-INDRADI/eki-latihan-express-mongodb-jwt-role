@@ -1,7 +1,7 @@
 module.exports = {
     post:{
-        tags:['log-cluster operation'],
-        description: "Create log cluster",
+        tags:['log cluster request parameter'],
+        description: "API ini digunakan untuk membuat generate file log menggunakan child process",
         operationId: "logClusterCreate",
         parameters:[],
         requestBody: {

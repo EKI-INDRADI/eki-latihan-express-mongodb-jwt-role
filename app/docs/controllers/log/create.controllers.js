@@ -1,7 +1,7 @@
 module.exports = {
     post:{
-        tags:['log operation'],
-        description: "Create log",
+        tags:['log request parameter'],
+        description: "API ini digunakan untuk membuat generate file log (tanpa menggunakan child process)",
         operationId: "logCreate",
         parameters:[],
         requestBody: {
