@@ -175,18 +175,15 @@ pm2 start ecosystem.config.js   (pm2)
 
 - https://bezkoder.com/node-js-mongodb-auth-jwt/  (Many thanks to bezkoder)
 
-- Programmer Zaman Now Vlog - Eko Kurniawan Khannedy  (Many thanks to Eko Kurniawan Khannedy, The Inspired Concept)
-
-(https://www.youtube.com/watch?v=3PMLwe_C-F0&list=PL-CtdCApEFH-aVPPDMSfNmKVZghCyGpBQ [VLOD],
+- Programmer Zaman Now - Eko Kurniawan Khannedy  (Many thanks to Eko Kurniawan Khannedy, The Inspired Concept)
+(https://www.youtube.com/watch?v=3PMLwe_C-F0&list=PL-CtdCApEFH-aVPPDMSfNmKVZghCyGpBQ [VLOG],
 https://www.youtube.com/watch?v=MEDzXUF-kUg&list=PL-CtdCApEFH-o-O5xekaYBmZD0MX9fSr1 [WORKLOAD],
 https://www.youtube.com/watch?v=zVoSBSaHHWM&list=PL-CtdCApEFH9GM4fZuXtOWxFfXQtgnPjh [ARTICLE_REVIEW])
 
 - Udemy - Academind - Maximilian Schwarzmüller
-
 (https://www.udemy.com/course/mongodb-the-complete-developers-guide)
 
 - Udemy - Pravinkumar Dabade 
-
 (https://www.udemy.com/course/node-js-cluster) (Many thanks to Pravinkumar Dabade)
 
 - https://github.com/behroozk/node-cluster-tutorial
