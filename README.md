@@ -177,7 +177,9 @@ pm2 start ecosystem.config.js   (pm2)
 
 - Programmer Zaman Now Vlog - Eko Kurniawan Khannedy  (Many thanks to Eko Kurniawan Khannedy, The Inspired Concept)
 
-(https://www.youtube.com/watch?v=3PMLwe_C-F0&list=PL-CtdCApEFH-aVPPDMSfNmKVZghCyGpBQ)
+(https://www.youtube.com/watch?v=3PMLwe_C-F0&list=PL-CtdCApEFH-aVPPDMSfNmKVZghCyGpBQ [VLOD],
+https://www.youtube.com/watch?v=MEDzXUF-kUg&list=PL-CtdCApEFH-o-O5xekaYBmZD0MX9fSr1 [WORKLOG],
+https://www.youtube.com/watch?v=zVoSBSaHHWM&list=PL-CtdCApEFH9GM4fZuXtOWxFfXQtgnPjh [ARTICLE_REVIEW])
 
 - Udemy - Academind - Maximilian Schwarzmüller
 
