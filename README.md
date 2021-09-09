@@ -110,9 +110,14 @@ npm run start:cluster   (nodemon)
 pm2 start ecosystem.config.js   (pm2)
 ```
 
+callback integration (event driven receiver/consumer)  :
+```ts
+nodemon ./event_driven_consumer_callback/listen_receiver.js
+```
+
 - app listen port 8080
 - swagger http://localhost:8080/api-docs
-- callback integration (event driven receiver/consumer)  nodemon ./event_driven_consumer_callback/listen_receiver.js
+- callback integration listen port 9000
 
 
 
