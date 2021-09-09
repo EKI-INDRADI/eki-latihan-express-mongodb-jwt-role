@@ -1,0 +1,3 @@
+RUN WITH PM2 EXEC CLUSTER MODE
+(perlu setting cluster di pm2 exec cluster jika ingin 1 backend receiver)
+examplenya ecosystem.config.js

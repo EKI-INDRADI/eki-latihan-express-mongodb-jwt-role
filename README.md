@@ -38,9 +38,9 @@ update note :
 - update automatic dynamic check undefined + schema + length , data validation with function request_validation ( controller dynamicValidation.controller) [done]
 - swagger OpenAPI Specification 3 - UPDATE JWT AUTHENTICATION [done]
 - swagger OpenAPI Specification 3 - AUTOGENERATE JS/JSON FILE SWAGGER DOCUMENT (LIKE LOOPBACK) [inprogress]
+- message broker / event driven / callback integration / producer sender -> consumer receiver [done]
 
 next update :
-- message broker / event driven [still rnd]
 - database caching [still rnd]
 
 
@@ -112,6 +112,7 @@ pm2 start ecosystem.config.js   (pm2)
 
 - app listen port 8080
 - swagger http://localhost:8080/api-docs
+- callback integration (event driven receiver/consumer)  nodemon ./event_driven_consumer_callback/listen_receiver.js
 
 
 

@@ -61,7 +61,13 @@ exports.app_middleware = function (base_dir) {
 
   //====================================== SWAGGER
   require("../routes/swagger.routes")(app);
+  // require("../routes/swaggerGenerate.routes")(app);
   //====================================== SWAGGER
+
+
+  //====================================== NOTIFICATION - RABBITMQ
+  require("../routes/notification.routes")(app); // amqplib
+  //====================================== NOTIFICATION - RABBITMQ
 
   const PORT = process.env.PORT_APP || exports.PORT_APP;
   app.listen(PORT, () => {
