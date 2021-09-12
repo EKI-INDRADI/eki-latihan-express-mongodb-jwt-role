@@ -85,7 +85,7 @@ karena expressJS lambat https://www.fastify.io/benchmarks/, berikut informasi ya
 9. kemudahan request limit
 10. kemudahan membuat routes, controller, services, dll (mirip generate angular, loopback, etc)
 11. karena Framework yang lengkap seperti Angular tidak terlalu membutuhkan inject dependecy, sehingga kinerja aplikasi jauh lebih cepat dari pada menggunakan framework yang liar / ketergantungan dependecy injection.
-12. javascript mampu scalable dan lebih cepat dari golang untuk beberapa case, berikut bukti nyata dengan menggunakan framework [fastify + cluster] performance yang cukup baik dari golang [ golang default tanpa sclable performance] https://www.youtube.com/watch?v=rr9UpsEBEUY , simple contohnya facebook pun masih menggunakan bahasa pemforgraman PHP namun meraka melakukan sclable & optimize performance dari berbagai aspek sehingga php dapat berjalan cepat dari standar.
+12. javascript mampu scalable dan lebih cepat dari golang untuk beberapa case, berikut bukti nyata dengan menggunakan framework [fastify_n_cluster] performance yang cukup baik dari golang [fiber] https://www.youtube.com/watch?v=rr9UpsEBEUY https://docs.gofiber.io/extra/benchmarks, simple contohnya facebook pun masih menggunakan bahasa pemforgraman PHP namun meraka melakukan sclable & optimize performance dari berbagai aspek sehingga php dapat berjalan cepat dari standar.
 
 
 
