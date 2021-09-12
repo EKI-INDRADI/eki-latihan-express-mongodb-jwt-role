@@ -368,7 +368,8 @@ module.exports = (callback = null) => {
 
         console.log(`[total cpu thread : ${cpu_threads}] [total child process : ${cpu_threads_child_process}] [total worker cluster fork : ${cpu_threads_cluster_fork}] started`);
         console.log(`PORT : [APP : ${app.PORT_APP}] `) //[SWAGGER : ${swagger.PORT_SWAGGER}]
-        console.log(`URL : [SWAGGER : http://localhost:8080/api-docs ]`) 
+        console.log(`URL : [SWAGGER : http://localhost:8080/api-docs]`) 
+        console.log(`EVENT DRIVEN : [RABBITMQ : ${(process.env.RABBITMQ_SERVER)? process.env.RABBITMQ_SERVER : "amqp://localhost"}]`) 
     }
 
     if (cluster.isMaster) {

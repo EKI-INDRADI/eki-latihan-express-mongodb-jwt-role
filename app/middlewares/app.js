@@ -19,12 +19,18 @@ app.disable('etag')
 app.disable('x-powered-by')
 //=========== /update performance
 
+
+
+
 let morgan_middleware = require("./morgan")
 app.use(morgan_middleware)
 
 let connection = require("./connection")
 connection.mongodb()
 
+
+let rate_limit_middleware = require("./rateLimit")
+app.use(rate_limit_middleware)
 
 
 exports.PORT_APP = 8080
@@ -37,13 +43,14 @@ exports.app_middleware = function (base_dir) {
     res.json({ message: "Backend OK" });
   });
 
-  require("../routes/pasien.routes")(app);
-  require("../routes/antrian.routes")(app);
 
   // ===================================== JWT MODULE - ADMIN ROLE
   require("../routes/auth.routes")(app);
   require("../routes/user.routes")(app);
   // ===================================== JWT MODULE - ADMIN ROLE
+
+  require("../routes/pasien.routes")(app);
+  require("../routes/antrian.routes")(app);
 
   // ===================================== FILE UPLOAD
   require("../routes/fileUpload.routes")(app);
@@ -68,6 +75,10 @@ exports.app_middleware = function (base_dir) {
   //====================================== NOTIFICATION - RABBITMQ
   require("../routes/notification.routes")(app); // amqplib
   //====================================== NOTIFICATION - RABBITMQ
+
+  //====================================== RATE-LIMIT
+  require("../routes/requestLimit.routes")(app);
+  //====================================== RATE-LIMIT
 
   const PORT = process.env.PORT_APP || exports.PORT_APP;
   app.listen(PORT, () => {

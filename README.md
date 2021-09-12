@@ -37,8 +37,10 @@ update note :
 - update expressjs performance [done]
 - update automatic dynamic check undefined + schema + length , data validation with function request_validation ( controller dynamicValidation.controller) [done]
 - swagger OpenAPI Specification 3 - UPDATE JWT AUTHENTICATION [done]
+- message broker / event driven, rabbitmq producer sender -> consumer receiver[done]
+- request limit by ip/login/username/email/etc & customize (blacklist, whitelist from request url/token/req.body/etc) [done]
 - swagger OpenAPI Specification 3 - AUTOGENERATE JS/JSON FILE SWAGGER DOCUMENT (LIKE LOOPBACK) [inprogress]
-- message broker / event driven / callback integration / producer sender -> consumer receiver [done]
+- message broker / event driven, rabbitmq message delay & customize publisher/queue/exchange [inprogress]
 
 next update :
 - database caching [still rnd]
@@ -203,6 +205,14 @@ https://www.youtube.com/watch?v=zVoSBSaHHWM&list=PL-CtdCApEFH9GM4fZuXtOWxFfXQtgn
 - https://swagger.io/docs/specification/authentication/ (OpenAPI Specification 3)
 
 - https://github.com/mwangiKibui/node.js-rest-api-documentation (Many thanks to mwangiKibui)
+
+- https://www.tabnine.com/code/javascript/modules/express-rate-limit (keyGenerator)
+
+- https://stackoverflow.com/questions/7042340/error-cant-set-headers-after-they-are-sent-to-the-client (request,response)
+
+- https://medium.com/pixel-and-ink/rate-limiting-in-express-7a43ac14ed0c (skip)
+
+- node_modules\express-rate-limit\lib (function documentation)
 
 
 

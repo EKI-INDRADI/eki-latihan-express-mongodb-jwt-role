@@ -10,18 +10,13 @@ module.exports = {
 
             result = sender_services(req.body)
 
-            res.json({
-                statusCode: 1,
-                message: "send to consumer"
-            })
-            
+            res.json({statusCode : 1,
+            message : "send to consumer"})
         } catch (error) {
-            let res_json = {
+            return {
                 statusCode: 0,
                 message: "controller noitication, error : " + error.message
             }
-
-            console.log(res_json)
         }
 
 
