@@ -206,13 +206,13 @@ https://www.youtube.com/watch?v=zVoSBSaHHWM&list=PL-CtdCApEFH9GM4fZuXtOWxFfXQtgn
 
 - https://github.com/mwangiKibui/node.js-rest-api-documentation (Many thanks to mwangiKibui)
 
-- https://www.tabnine.com/code/javascript/modules/express-rate-limit (keyGenerator)
+- https://www.tabnine.com/code/javascript/modules/express-rate-limit  (rate-limit -> keyGenerator)
 
-- https://stackoverflow.com/questions/7042340/error-cant-set-headers-after-they-are-sent-to-the-client (request,response)
+- https://stackoverflow.com/questions/7042340/error-cant-set-headers-after-they-are-sent-to-the-client (rate-limit -> req,res)
 
-- https://medium.com/pixel-and-ink/rate-limiting-in-express-7a43ac14ed0c (skip)
+- https://medium.com/pixel-and-ink/rate-limiting-in-express-7a43ac14ed0c (rate-limit -> skip)
 
-- node_modules\express-rate-limit\lib (function documentation)
+- node_modules\express-rate-limit\lib (rate-limit -> function documentation)
 
 
 
