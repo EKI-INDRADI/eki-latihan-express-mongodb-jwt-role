@@ -18,8 +18,6 @@ benar yang selama ini saya pelajari backend pun hanya kulitnya saja, informasi i
 - bagaimana membuat dokumentasi yang praktis dan baik
 - bagaimana bagaimana bagaimana, jujur gw ga tamat2 ini riset backend lagi2 ada lagi ada lagi masalah yang di temui di beberapa forum diskusi, youtube channel, dll, yang akhirnya mau belajar framework lain / bahasa baru jadi tidak kesampaian2 karena terlalu focus pada masalah dari kata "bagaimana".
 
-untuk fullstack udah sampai mana kau pake teknologi backend ?
-
 
 - BACKEND API EXPRESSJS ZAMAN NOW !!!
 
@@ -85,7 +83,7 @@ karena expressJS lambat https://www.fastify.io/benchmarks/, berikut informasi ya
 9. kemudahan request limit
 10. kemudahan membuat routes, controller, services, dll (mirip generate angular, loopback, etc)
 11. karena Framework yang lengkap seperti Angular tidak terlalu membutuhkan inject dependecy, sehingga kinerja aplikasi jauh lebih cepat dari pada menggunakan framework yang liar / ketergantungan dependecy injection.
-12. javascript mampu scalable dan lebih cepat dari golang untuk beberapa case, berikut bukti nyata dengan menggunakan framework [fastify_n_cluster] performance yang cukup baik dari golang [fiber] https://www.youtube.com/watch?v=rr9UpsEBEUY https://docs.gofiber.io/extra/benchmarks, simple contohnya facebook pun masih menggunakan bahasa pemforgraman PHP namun meraka melakukan sclable & optimize performance dari berbagai aspek sehingga php dapat berjalan cepat dari standar.
+12. javascript mampu scalable dan lebih cepat dari golang untuk beberapa case, berikut bukti nyata dengan menggunakan framework [fastify_n_cluster] performance yang cukup baik dari golang [fiber] https://www.youtube.com/watch?v=rr9UpsEBEUY https://github.com/fastify/fastify https://www.fastify.io/benchmarks https://docs.gofiber.io/extra/benchmarks, simple contohnya facebook pun masih menggunakan bahasa pemforgraman PHP namun meraka melakukan sclable & optimize performance dari berbagai aspek sehingga php dapat berjalan cepat dari standar.
 
 
 
