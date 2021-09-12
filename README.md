@@ -1,6 +1,24 @@
 # EKI RESEARCH & DEVELOPMENT BACKEND
 
-"MAKE BEST BACKEND ENGINEER, JUST FREE FOR YOU"
+"MAKE BEST BACKEND ENGINEER", udah jago pake backend yakin ? beberapa orang menganggap backend hanya sebuah code yang mehubungkan request/response data ke database (CRUD) saja, dari beberapa developer fullstack yang saya temui ternyata pemahaman backend nya hanya sekedar KULIT nya saja (CRUD + TOKEN),
+
+benar yang selama ini saya pelajari backend pun hanya kulitnya saja, informasi ini saya dapatkan juga dari channel youtube "ProgrammerZamanNow" pada VLOG nya, ternyata banyak sekali masalah yang dihadapi startup terutama untuk startup yang memiliki request API, pengguna aplikasi yang banyak, mulai dari
+
+- bagaimana menghadapi jumlah request yang banyak
+- bagaimana menangani banyaknya bug pada live production
+- bagaimana membuat security yang cukup baik
+- bagaimana cara penanganan data realtime
+- bagaimana menggunakan framework yang baik agar mudah di pahami oleh programmer yang baru bergabung
+- bagaimana bagaimana meminimalisir request agar tidak terus berulang kali request dengan data yang sama
+- bagaimana membuat backend api & database 
+- bagaimana memilih enkripsi yang baik
+- bagaimana menggunakan code yang baik untuk peningkatan kinerja
+- bagaimana membuat services agar tidak terlalu banyak menunggu services lain yang ketergantungan
+- bagaimana cara menghadapi brute force / bot pada live production
+- bagaimana membuat dokumentasi yang praktis dan baik
+- bagaimana bagaimana bagaimana, jujur gw ga tamat2 ini riset backend lagi2 ada lagi ada lagi masalah yang di temui di beberapa forum diskusi, youtube channel, dll, yang akhirnya mau belajar framework lain / bahasa baru jadi tidak kesampaian2 karena terlalu focus pada masalah dari kata "bagaimana".
+
+untuk fullstack udah sampai mana kau pake teknologi backend ?
 
 
 - BACKEND API EXPRESSJS ZAMAN NOW !!!
@@ -12,6 +30,7 @@ ini adalah project backend yang pernah dipakai untuk test di salah satu prusahaa
 
 
 update note : 
+
 - user signup (jwt) dengan role spesifik  [done]
 - user signin (jwt) [done]
 - test halaman user (untuk user akun) [done]
@@ -40,10 +59,33 @@ update note :
 - message broker / event driven, rabbitmq producer sender -> consumer receiver[done]
 - request limit by ip/login/username/email/etc & customize (blacklist, whitelist from request url/token/req.body/etc) [done]
 - swagger OpenAPI Specification 3 - AUTOGENERATE JS/JSON FILE SWAGGER DOCUMENT (LIKE LOOPBACK) [inprogress]
-- message broker / event driven, rabbitmq message delay & customize publisher/queue/exchange [inprogress]
+- message broker / event driven, rabbitmq delay message & customize publisher/queue/exchange [inprogress]
 
 next update :
-- database caching [still rnd]
+
+- Redis database caching [still_rnd]
+- Nginx loadbalancer [still_rnd]
+- Robust Microservice [still_rnd]
+- Database encryption [strill_rnd]
+- Enkripsi database (user) seperti yang dilakukan badan siber dan sandi negara, agar tidak beberapa e-commerce yang bocor datanya pada cr*ckingf*r*m , silahkan cek email mu pada https://haveibeenpwned.com/ [still_rnd]
+
+
+dikala bosen pake expressJs :
+
+- NestJs [still_rnd] , https://github.com/EKI-INDRADI/eki-latihan-nestjs-mongodb
+karena expressJS lambat https://www.fastify.io/benchmarks/, berikut informasi yang saya dapatkan ketika membaca artikel & mencoba code 
+1. Angular pattern 
+2. Modern javascript framework (typescript + ES6 + ES7+ ES8) 
+3. MVC cencept (mirip persis angular rapih dan ketika programmer baru join tidak akan kesulitan menggunakan pattern)
+4. Backend Progressive Framework (tanpa reload seperti angular)
+5. kemudahan validasi data
+6. kemudahan sclable & optimize performance (dapat menggunakan fastify untuk request & response nya), cluster & dll
+7. pattern yang baik (tidak liar logic seperti expressjs)
+8. kemudahan dokumentasi (auto generate swagger)
+9. kemudahan request limit
+10. kemudahan membuat routes, controller, services, dll (mirip generate angular, loopback, etc)
+11. karena Framework yang lengkap seperti Angular tidak terlalu membutuhkan inject dependecy, sehingga kinerja aplikasi jauh lebih cepat dari pada menggunakan framework yang liar / ketergantungan dependecy injection.
+
 
 
 
@@ -147,7 +189,11 @@ nodemon ./event_driven_consumer_callback/listen_receiver.js
 
 - auto check validation (undefined, schema, length) data request (req.body) with dynamicValidation.controller.js & function request_validation.js 
  
-- fitur aplikasi tidak akan di tambah (dari sisi fitur aplikasi), tujuan framework ini adalah di persiapan untuk handle event driven (message broker / data realtime & security yang cukup baik) , karena untuk fitur aplikasi crud banyak yang bisa (programmer baru lulus juga bisa CRUD, tapi sclable & optimize performance hanya akan ada pertanyaan jika kamu melamar sebagai senior backend engginer/atau jabatan yang lebih tinggi).
+- fitur aplikasi tidak akan di tambah (dari sisi fitur aplikasi), 
+
+tujuan framework ini adalah di persiapan untuk handle event driven (message broker / data realtime), sclable & optimize performance, dokumentasi & security yang cukup baik), karena untuk fitur aplikasi crud  & token itu HANYA KULITNYA DOANG (disetarakan fresh graduate),
+
+tapi sclable & optimize performance hanya akan ada pertanyaan jika kamu melamar sebagai senior backend engginer/atau jabatan yang lebih tinggi).
 
 
 
