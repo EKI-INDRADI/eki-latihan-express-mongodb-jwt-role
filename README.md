@@ -67,7 +67,7 @@ next update :
 - Nginx loadbalancer [still_rnd]
 - Robust Microservice [still_rnd]
 - Database encryption [strill_rnd]
-- Enkripsi database (user) seperti yang dilakukan badan siber dan sandi negara, agar tidak beberapa e-commerce yang bocor datanya pada cr*ckingf*r*m , silahkan cek email mu pada https://haveibeenpwned.com/ [still_rnd]
+- Enkripsi database (user) seperti yang dilakukan badan siber dan sandi negara, agar data user aman tidak seperti beberapa e-commerce yang bocor datanya pada cr*ckingf*r*m , silahkan cek email mu pada https://haveibeenpwned.com/ [still_rnd]
 
 
 dikala bosen pake expressJs :
