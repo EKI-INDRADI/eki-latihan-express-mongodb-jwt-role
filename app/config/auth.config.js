@@ -1,4 +1,4 @@
-// ===================================== JWT MODULE 2021-11-26
+// ===================================== JWT MODULE 20211126-0001-ENVIRONTMENT-JWT-TOKEN
 
 let set_token_life = 1
 // let calculate_token_life = set_token_life * 60 * 60 //hours
@@ -18,4 +18,4 @@ module.exports = {
   token_created_at: now_date,
   token_expired_at: expired_at
 };
-// ===================================== JWT MODULE 2021-11-26
+// ===================================== JWT MODULE 20211126-0001-ENVIRONTMENT-JWT-TOKEN
