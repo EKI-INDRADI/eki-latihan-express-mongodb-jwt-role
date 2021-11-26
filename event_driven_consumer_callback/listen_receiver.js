@@ -15,9 +15,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-
-
-
 amqplib.connect(rabbitmq_server.rabbitmq_url, (err, connection) => {
     if (err) { process.exit(); }
     else {

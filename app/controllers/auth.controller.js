@@ -93,7 +93,7 @@ exports.signin = (req, res) => {
       }
 
       var token = jwt.sign({ id: user.id }, config.secret, {
-        expiresIn: 86400 // 24 hours
+        expiresIn: config.token_life // 24 hours
       });
 
       var authorities = [];
@@ -139,7 +139,7 @@ exports.token = (req, res) => {
       }
 
       var token = jwt.sign({ id: user.id }, config.secret, {
-        expiresIn: 86400 // 24 hours
+        expiresIn: config.token_life // 24 hours
       });
 
       var authorities = [];
@@ -152,7 +152,11 @@ exports.token = (req, res) => {
         // username: user.username,
         // email: user.email,
         // roles: authorities,
-        token: token
+        token: token,
+        token_life: config.token_life,
+        token_life_hours: config.token_life_hours,
+        token_created_at: config.token_created_at,
+        token_expired_at: config.token_expired_at
       });
     });
 };

@@ -7,6 +7,8 @@ const Role = db.role;
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
+
+
 exports.signup = (req, res) => {
 
 
@@ -93,7 +95,8 @@ exports.signin = (req, res) => {
       }
 
       var token = jwt.sign({ id: user.id }, config.secret, {
-        expiresIn: 86400 // 24 hours
+        // expiresIn: 86400 // 24 hours
+        expiresIn: config.token_life// 24 hours
       });
 
       var authorities = [];

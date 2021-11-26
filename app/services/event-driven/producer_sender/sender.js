@@ -17,9 +17,7 @@ function event_driven_producer(request) {
                     message: error
                 }
                 console.log(res_json)
-                process.exit();
-                
-            
+                process.exit();      
 
             }
             else {

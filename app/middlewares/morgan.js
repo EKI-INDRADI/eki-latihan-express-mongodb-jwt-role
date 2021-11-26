@@ -2,7 +2,11 @@
 const morgan = require('morgan');
 const chalk = require('chalk');
 
+
+
 module.exports = morgan(function (tokens, req, res) {
+
+
     let status = tokens.status(req, res)
     let statusColor = status >= 500 ? 'red'
         : status >= 400 ? 'yellow'
@@ -18,7 +22,7 @@ module.exports = morgan(function (tokens, req, res) {
 
     let content_length = tokens.res(req, res, 'content-length')
     let content_length_color = content_length >= 500 ? 'red'
-        : content_length >= 200? 'yellow'
+        : content_length >= 200 ? 'yellow'
             : content_length >= 100 ? 'cyan'
                 : 'green'
 
@@ -27,7 +31,7 @@ module.exports = morgan(function (tokens, req, res) {
         + '' + chalk.reset(',')
         + ' [response-time] = ' + chalk.bold[response_time_color](padLeft(tokens['response-time'](req, res) + ' ms', 8))
         + '' + chalk.reset(',')
-        + ' [content-length] = ' +chalk.bold[content_length_color](tokens.res(req, res, 'content-length'))
+        + ' [content-length] = ' + chalk.bold[content_length_color](tokens.res(req, res, 'content-length'))
 
     return res_json
 
